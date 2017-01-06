@@ -1,0 +1,39 @@
+Intel MKL FATAL ERROR: Cannot load libmkl_mc3.so or libmkl_def.so.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c3-10>
+Subject: Job 890185: <mpiexec -n 10 /share2/zyu9/miniconda/bin/python2.7 tune_LDA.py exp> Exited
+
+Job <mpiexec -n 10 /share2/zyu9/miniconda/bin/python2.7 tune_LDA.py exp> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2>.
+Job was executed on host(s) <10*n2c3-10>, in queue <long>, as user <zyu9> in cluster <henry2>.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/no_ES/src> was used as the working directory.
+Started at Thu Jan  5 07:42:58 2017
+Results reported at Thu Jan  5 07:46:32 2017
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpiexec -n 10 /share2/zyu9/miniconda/bin/python2.7 tune_LDA.py exp
+------------------------------------------------------------
+
+Exited with exit code 2.
+
+Resource usage summary:
+
+    CPU time   :   1931.12 sec.
+    Max Memory :       718 MB
+    Max Swap   :      6011 MB
+
+    Max Processes  :        14
+    Max Threads    :        15
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/err.890185> for stderr output of this job.
+

@@ -17,7 +17,7 @@ def exp():
     if rank==0:
         # file = '/Users/zhe/PycharmProjects/Datasets/StackExchange/'+str(set)+'.txt'
         the_model=similarity_tune
-        dec, obj = differential_evolution(model=the_model)
+        dec, obj = differential_evolution()
 
 
 	

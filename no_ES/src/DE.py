@@ -39,15 +39,15 @@ def differential_evolution(**kwargs):
                 print(".",end="")
             yield xnew
 
-    model=similarity_tune
+    the_model=similarity_tune
     nb=10
     maxtries=10
     f=0.75
     cr=0.3
-    xbest=model(**kwargs)
+    xbest=the_model(**kwargs)
     candidates=[xbest]
     for i in range(1,nb):
-        x=model(**kwargs)
+        x=the_model(**kwargs)
         candidates.append(x)
         if x.eval()>xbest.eval():
             xbest.copy(x)

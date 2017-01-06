@@ -5,11 +5,6 @@ import numpy as np
 from pdb import set_trace
 from demos import cmd
 import pickle
-import matplotlib.pyplot as plt
-import matplotlib.colors as colors
-import matplotlib.cm as cmx
-from sk import rdivDemo
-import unicodedata
 import random
 from sklearn import svm
 from collections import Counter
@@ -184,107 +179,6 @@ def hcca_lda(csr_mat,csr_lda, labels, step=10 ,initial=10, pos_limit=1, thres=30
 
 ##### draw
 
-def update_repeat_draw(file):
-    font = {'family': 'cursive',
-            'weight': 'bold',
-            'size': 20}
-
-
-    plt.rc('font', **font)
-    paras = {'lines.linewidth': 4, 'legend.fontsize': 20, 'axes.labelsize': 30, 'legend.frameon': False,
-             'figure.autolayout': True, 'figure.figsize': (16, 6)}
-    plt.rcParams.update(paras)
-
-    with open("../dump/"+str(file)+".pickle", "r") as f:
-        results=pickle.load(f)
-
-
-    stats=bestNworst(results)
-    colors=['blue','purple','green','brown','red']
-    lines=['-','--',':']
-    five=['best','$Q_1$','median','$Q_3$','worst']
-
-    nums = set([])
-    line=[0,0,0,0,0]
-
-    for key in stats:
-        a = key.split("_")[0]
-        if a=="start":
-            a='FASTREAD'
-        try:
-            b = key.split("_")[1]
-        except:
-            b = 0
-        nums = nums | set([b])
-        plt.figure(int(b))
-        for j,ind in enumerate(stats[key]):
-            plt.plot(stats[key][ind]['x'], stats[key][ind]['pos'],linestyle=lines[line[int(b)]],color=colors[j],label=five[j]+"_"+str(a).capitalize())
-        line[int(b)]+=1
-
-    for i in nums:
-        plt.figure(int(i))
-        plt.ylabel("Retrieval Rate")
-        plt.xlabel("Studies Reviewed")
-        plt.legend(bbox_to_anchor=(0.9, 0.60), loc=1, ncol=line[int(i)], borderaxespad=0.)
-        plt.savefig("../figure/"+str(file)+str(i)+".eps")
-        plt.savefig("../figure/"+str(file)+str(i)+".png")
-
-def update_median_draw(file):
-    font = {'family': 'cursive',
-            'weight': 'bold',
-            'size': 20}
-
-
-    plt.rc('font', **font)
-    paras = {'lines.linewidth': 4, 'legend.fontsize': 20, 'axes.labelsize': 30, 'legend.frameon': False,
-             'figure.autolayout': True, 'figure.figsize': (16, 6)}
-    plt.rcParams.update(paras)
-
-    with open("../dump/"+str(file)+".pickle", "r") as f:
-        results=pickle.load(f)
-
-
-    stats=bestNworst(results)
-    colors=['blue','purple','green','brown','red']
-    lines=['-','--',':']
-    five=['best','$Q_1$','median','$Q_3$','worst']
-
-    nums = set([])
-    line=[0,0,0,0,0]
-    for key in stats:
-        a = key.split("_")[0]
-        if a=="start":
-            a='FASTREAD'
-        try:
-            b = key.split("_")[1]
-        except:
-            b = 0
-        nums = nums | set([b])
-        plt.figure(int(b))
-        for j,ind in enumerate(stats[key]):
-            if ind==50:
-                plt.plot(stats[key][ind]['x'], stats[key][ind]['pos'],linestyle=lines[line[int(b)]],color=colors[j],label=five[j]+"_"+str(a).capitalize())
-        line[int(b)]+=1
-
-    for i in nums:
-        plt.figure(int(i))
-        plt.ylabel("Retrieval Rate")
-        plt.xlabel("Studies Reviewed")
-        plt.legend(bbox_to_anchor=(0.9, 0.60), loc=1, ncol=1, borderaxespad=0.)
-        plt.savefig("../figure/median_"+str(file)+str(i)+".eps")
-        plt.savefig("../figure/median_"+str(file)+str(i)+".png")
-
-def bestNworst(results):
-    stats={}
-
-    for key in results:
-        stats[key]={}
-        result=results[key]
-        order = np.argsort([r['x'][-1] for r in result])
-        for ind in [0,25,50,75,100]:
-            stats[key][ind]=result[order[int(ind*(len(order)-1)/100)]]
-
-    return stats
 
 ##### UPDATE exp
 def update_exp():
@@ -483,28 +377,6 @@ def similarity(a,b,norm=2):
     x=range(tops)
 
 
-    font = {'family': 'cursive',
-            'weight': 'bold',
-            'size': 20}
-
-
-    plt.rc('font', **font)
-    paras = {'lines.linewidth': 4, 'legend.fontsize': 20, 'axes.labelsize': 30, 'legend.frameon': False,
-             'figure.autolayout': True, 'figure.figsize': (16, 6)}
-    plt.rcParams.update(paras)
-
-    plt.figure()
-    plt.plot(x, np.array(sum_a)[0] ,label=a.split('.')[0])
-    plt.plot(x, np.array(sum_b)[0] ,label=b.split('.')[0])
-
-
-    plt.ylabel("Topic Weight")
-    plt.xlabel("Topic ID")
-    plt.legend(bbox_to_anchor=(0.9, 0.90), loc=1, ncol=1, borderaxespad=0.)
-    plt.savefig("../figure/data_"+a.split('.')[0]+" vs "+b.split('.')[0]+".eps")
-    plt.savefig("../figure/data_"+a.split('.')[0]+" vs "+b.split('.')[0]+".png")
-
-
     # Data similarity
     score=0
     if norm==1:
@@ -521,17 +393,6 @@ def similarity(a,b,norm=2):
     dis_pos_b = dis_b[pos_b]
     sum_pos_a = dis_pos_a.sum(axis=0)/dis_pos_a.shape[0]
     sum_pos_b = dis_pos_b.sum(axis=0)/dis_pos_b.shape[0]
-
-    plt.figure()
-    plt.plot(x, np.array(sum_pos_a)[0] ,label=a.split('.')[0])
-    plt.plot(x, np.array(sum_pos_b)[0] ,label=b.split('.')[0])
-
-
-    plt.ylabel("Topic Weight")
-    plt.xlabel("Topic ID")
-    plt.legend(bbox_to_anchor=(0.9, 0.90), loc=1, ncol=1, borderaxespad=0.)
-    plt.savefig("../figure/target_"+a.split('.')[0]+" vs "+b.split('.')[0]+".eps")
-    plt.savefig("../figure/target_"+a.split('.')[0]+" vs "+b.split('.')[0]+".png")
 
     score2=0
     if norm==1:
@@ -589,30 +450,7 @@ def similarity_all(tops=30,alpha=0.1,eta=0.1,norm=2):
     x=range(tops)
 
 
-    font = {'family': 'cursive',
-            'weight': 'bold',
-            'size': 20}
-
-
-    plt.rc('font', **font)
-    paras = {'lines.linewidth': 4, 'legend.fontsize': 20, 'axes.labelsize': 30, 'legend.frameon': False,
-             'figure.autolayout': True, 'figure.figsize': (16, 6)}
-    plt.rcParams.update(paras)
-
-    plt.figure()
-    plt.plot(x, np.array(sum_a)[0] ,label="Hall")
-    plt.plot(x, np.array(sum_b)[0] ,label="Wahono")
-    plt.plot(x, np.array(sum_c)[0], label="Abdellatif")
-
-
-    plt.ylabel("Topic Weight")
-    plt.xlabel("Topic ID")
-    plt.legend(bbox_to_anchor=(0.9, 0.90), loc=1, ncol=1, borderaxespad=0.)
-    plt.savefig("../figure/data_topic.eps")
-    plt.savefig("../figure/data_topic.png")
-
-
-    # Data similarity
+    #Data similarity
     score1 = (sum_a*sum_b.transpose())[0,0]/(np.linalg.norm(sum_a,2)*np.linalg.norm(sum_b,2))
     score2 = (sum_a * sum_c.transpose())[0, 0] / (np.linalg.norm(sum_a, 2) * np.linalg.norm(sum_c, 2))
     score3 = (sum_c * sum_b.transpose())[0, 0] / (np.linalg.norm(sum_c, 2) * np.linalg.norm(sum_b, 2))
@@ -632,18 +470,7 @@ def similarity_all(tops=30,alpha=0.1,eta=0.1,norm=2):
     sum_pos_b = dis_pos_b.sum(axis=0)/dis_pos_b.shape[0]
     sum_pos_c = dis_pos_c.sum(axis=0) / dis_pos_c.shape[0]
 
-    plt.figure()
-    plt.plot(x, np.array(sum_pos_a)[0], label="Hall")
-    plt.plot(x, np.array(sum_pos_b)[0], label="Wahono")
-    plt.plot(x, np.array(sum_pos_c)[0], label="Abdellatif")
-
-
-    plt.ylabel("Topic Weight")
-    plt.xlabel("Topic ID")
-    plt.legend(bbox_to_anchor=(0.9, 0.90), loc=1, ncol=1, borderaxespad=0.)
-    plt.savefig("../figure/target_topic.eps")
-    plt.savefig("../figure/target_topic.png")
-
+    
 
     score4 = (sum_pos_a*sum_pos_b.transpose())[0,0]/(np.linalg.norm(sum_pos_a,2)*np.linalg.norm(sum_pos_b,2))
     score5 = (sum_pos_a * sum_pos_c.transpose())[0, 0] / (np.linalg.norm(sum_pos_a, 2) * np.linalg.norm(sum_pos_c, 2))

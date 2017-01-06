@@ -6,7 +6,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import csv
 from collections import Counter
 from sklearn import svm
-import matplotlib.pyplot as plt
 import time
 import os
 
@@ -342,6 +341,7 @@ class MAR(object):
 
     ## Plot ##
     def plot(self):
+	import matplotlib.pyplot as plt
         font = {'family': 'normal',
                 'weight': 'bold',
                 'size': 20}
