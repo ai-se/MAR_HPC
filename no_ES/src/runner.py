@@ -568,12 +568,15 @@ def repeat_sim(tops=30,alpha=0.1,eta=0.1):
             break
         scores.append(similarity_tune(tops=tops,alpha=alpha,eta=eta,seed=i))
         era = era + 1
+        print("0:1")
+    print("0:2")
     for i in range(proc_num - 1):
         tmp = comm.recv(source=i + 1)
         scores.extend(tmp)
-
+    print("0:3")
     n=len(scores[0])
     x=[[j[i] for j in scores] for i in xrange(n)]
+    print("0:4")
     # print(x)
     print([np.median(xx) for xx in x])
     iqr=[np.percentile(xx,75)-np.percentile(xx,25) for xx in x]

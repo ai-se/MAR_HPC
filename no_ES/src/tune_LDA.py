@@ -42,7 +42,9 @@ def exp():
                     break
                 scores.append(similarity_tune(tops=tunee[0], alpha=tunee[1], eta=tunee[2], seed=i))
                 era = era + 1
+                print("%d 1" %i)
             comm.send(scores, dest=0)
+            print("%d 2" % rank)
 
 
 
