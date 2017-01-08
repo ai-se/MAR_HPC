@@ -566,7 +566,7 @@ def repeat_sim(tops=30,alpha=0.1,eta=0.1):
         i = era * proc_num + rank
         if i + 1 > repeats:
             break
-        scores.extend(similarity_tune(tops=tops,alpha=alpha,eta=eta,seed=i))
+        scores.append(similarity_tune(tops=tops,alpha=alpha,eta=eta,seed=i))
         era = era + 1
     for i in range(proc_num - 1):
         tmp = comm.recv(source=i + 1)

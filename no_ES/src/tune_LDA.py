@@ -22,7 +22,7 @@ def exp():
 
 	
         for i in xrange(proc_num - 1):
-                comm.send("finished", dest=i + 1)
+            comm.send("finished", dest=i + 1)
 
         results={"tuned_train": obj, "tuned_dec": dec}
         print(results)
@@ -40,7 +40,7 @@ def exp():
                 i = era * proc_num + rank
                 if i + 1 > tunee[-1]:
                     break
-                    scores.extend(similarity_tune(tops=tunee[0], alpha=tunee[1], eta=tunee[2], seed=i))
+                scores.append(similarity_tune(tops=tunee[0], alpha=tunee[1], eta=tunee[2], seed=i))
                 era = era + 1
             comm.send(scores, dest=0)
 
