@@ -516,28 +516,24 @@ def similarity_tune(tops=30,alpha=0.1,eta=0.1,norm=2,seed=0):
 
     clt = lda.LDA(n_topics=tops, n_iter=200, alpha=alpha, eta=eta)
     dis = csr_matrix(clt.fit_transform(tf_d))
-    print("first")
     if norm!=1:
         dis = normalize(dis,ord=norm)
 
     dis_a = dis[:len(body_a)]
     dis_b = dis[len(body_a):len(body_a)+len(body_b)]
     dis_c = dis[len(body_a) + len(body_b):]
-    print("second")
     x=range(tops)
 
     # Target similarity
     pos_a = [i for i in xrange(len(label_a)) if label_a[i]=='yes']
     pos_b = [i for i in xrange(len(label_b)) if label_b[i]=='yes']
     pos_c = [i for i in xrange(len(label_c)) if label_c[i] == 'yes']
-    print("third")
     dis_pos_a = dis_a[pos_a]
     dis_pos_b = dis_b[pos_b]
     dis_pos_c = dis_c[pos_c]
     sum_pos_a = dis_pos_a.sum(axis=0)/dis_pos_a.shape[0]
     sum_pos_b = dis_pos_b.sum(axis=0)/dis_pos_b.shape[0]
     sum_pos_c = dis_pos_c.sum(axis=0) / dis_pos_c.shape[0]
-    print("forth")
 
 
     score4 = (sum_pos_a*sum_pos_b.transpose())[0,0]/(np.linalg.norm(sum_pos_a,2)*np.linalg.norm(sum_pos_b,2))
@@ -565,15 +561,11 @@ def repeat_sim(tops=30,alpha=0.1,eta=0.1):
             break
         scores.append(similarity_tune(tops=tops,alpha=alpha,eta=eta,seed=i))
         era = era + 1
-        print("0:1")
-    print("0:2")
     for i in xrange(proc_num - 1):
         tmp = comm.recv(source=i + 1)
         scores.extend(tmp)
-    print("0:3")
     n=len(scores[0])
     x=[[j[i] for j in scores] for i in xrange(n)]
-    print("0:4")
     # print(x)
     print([np.median(xx) for xx in x])
     iqr=[np.percentile(xx,75)-np.percentile(xx,25) for xx in x]
