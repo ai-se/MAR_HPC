@@ -21,7 +21,7 @@ def differential_evolution(**kwargs):
                 a3=[candidates[tt] for tt in abc]
                 xold=candidates[i]
                 r=randint(0,xold.decnum-1)
-                xnew=model(**kwargs)
+                xnew=the_model(**kwargs)
                 xnew.any()
                 for j in xrange(xold.decnum):
                     if random()<cr or j==r:
