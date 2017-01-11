@@ -49,7 +49,7 @@ def differential_evolution(**kwargs):
     for i in range(1,nb):
         x=the_model(**kwargs)
         candidates.append(x)
-        if x.eval()<xbest.eval():
+        if x.eval()>xbest.eval():
             xbest.copy(x)
     for tries in range(maxtries):
         print(", Retries: %2d, : Best solution: %s, " %(tries,xbest.dec),end="")
