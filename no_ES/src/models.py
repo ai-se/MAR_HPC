@@ -67,7 +67,7 @@ class similarity_tune(Model):
         if self.dec==self.lastdec:
             return self.obj
 
-        self.obj = repeat_sim(alpha=self.dec[0],eta=self.dec[1])
+        self.obj = -np.array(repeat_sim(alpha=self.dec[0],eta=self.dec[1]))
         return self.obj
 
 
