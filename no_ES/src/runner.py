@@ -570,7 +570,7 @@ def repeat_sim(tops=30,alpha=0.1,eta=0.1):
     print([np.median(xx) for xx in x])
     iqr=[np.percentile(xx,75)-np.percentile(xx,25) for xx in x]
     print(iqr)
-    return [iqr[-1],iqr[-2]]
+    return iqr
 
 def generate_data(file,norm=2):
     tops=30
