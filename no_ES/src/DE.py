@@ -32,12 +32,13 @@ def differential_evolution(**kwargs):
             if xnew.eval()>xbest.eval():
                 xbest.copy(xnew)
                 print("!",end="")
+                print(xbest.getobj(), end="")
             elif xnew.eval()>xold.eval():
                 print("+",end="")
             else:
                 xnew=xold
                 print(".",end="")
-
+            candidates[i]=xnew
             yield xnew
 
     the_model=similarity_tune
@@ -45,8 +46,13 @@ def differential_evolution(**kwargs):
     maxtries=10
     f=0.75
     cr=0.3
+    x=the_model(**kwargs)
     xbest=the_model(**kwargs)
-    candidates=[xbest]
+    if x.eval() < xbest.eval():
+        x.copy(xbest)
+    else:
+        xbest.copy(x)
+    candidates=[x]
     for i in range(1,nb):
         x=the_model(**kwargs)
         candidates.append(x)

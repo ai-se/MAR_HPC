@@ -539,9 +539,9 @@ def similarity_tune(tops=30,alpha=0.1,eta=0.1,norm=2,seed=0):
     score4 = (sum_pos_a*sum_pos_b.transpose())[0,0]/(np.linalg.norm(sum_pos_a,2)*np.linalg.norm(sum_pos_b,2))
     score5 = (sum_pos_a * sum_pos_c.transpose())[0, 0] / (np.linalg.norm(sum_pos_a, 2) * np.linalg.norm(sum_pos_c, 2))
     score6 = (sum_pos_c * sum_pos_b.transpose())[0, 0] / (np.linalg.norm(sum_pos_c, 2) * np.linalg.norm(sum_pos_b, 2))
-    print("target_Hall_Wahono: %f" % score4)
-    print("target_Hall_Abdellatif: %f" % score5)
-    print("target_Abdellatif_Wahono: %f" % score6)
+    # print("target_Hall_Wahono: %f" % score4)
+    # print("target_Hall_Abdellatif: %f" % score5)
+    # print("target_Abdellatif_Wahono: %f" % score6)
     score = [score4, score5, score6]
     return score
 
@@ -567,10 +567,10 @@ def repeat_sim(tops=30,alpha=0.1,eta=0.1):
     n=len(scores[0])
     x=[[j[i] for j in scores] for i in xrange(n)]
     # print(x)
-    print([np.median(xx) for xx in x])
+    # print([np.median(xx) for xx in x])
     iqr=[np.percentile(xx,75)-np.percentile(xx,25) for xx in x]
-    print(iqr)
-    return iqr
+    # print(iqr)
+    return [iqr[-1],iqr[-2]]
 
 def generate_data(file,norm=2):
     tops=30
