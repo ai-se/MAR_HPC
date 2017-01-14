@@ -37,6 +37,7 @@ def differential_evolution(**kwargs):
             else:
                 xnew=xold
                 print(".",end="")
+
             yield xnew
 
     the_model=similarity_tune
