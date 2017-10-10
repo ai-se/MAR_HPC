@@ -1165,6 +1165,11 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
             else:
                 for id in c:
                     read.code_error(id, error=error)
+    if read.interval < 100:
+        read.round = read.interval
+        a,b,c,d =read.train(weighting=True,pne=True)
+        for id in c:
+            read.code_error(id, error=error)
     read.export()
     results = analyze(read)
     print(results)
@@ -1597,12 +1602,34 @@ def error_summary():
     correct = ['none', 'three', 'machine']
     results = []
     with open("../dump/error_hpcc.pickle","r") as handle:
+        # result = pickle.load(handle)
+        # result2 = pickle.load(handle)
+        for i in xrange(29):
+            results.append(pickle.load(handle))
 
-        for i in xrange(30):
-            results.append(pickle.loads(handle))
+    trans = {}
 
-    set_trace()
+    for file in files:
+        trans[file] = {}
+        for cor in correct:
+            trans[file][cor] = {}
+            keys = results[0][file][cor].keys()
+            for key in keys:
+                trans[file][cor][key]=[]
+                for i in xrange(len(results)):
+                    trans[file][cor][key].append(results[i][file][cor][key])
 
+    ####draw table
+
+    print("\\begin{tabular}{ |l|c|c|c| }")
+    print("\\hline")
+    print("  & none & three & machine  \\\\")
+    print("\\hline")
+    for dataset in files:
+        out = dataset.split('.')[0]+" & " + ' & '.join([str(int(np.median(trans[dataset][cor]['truepos'])))+" / "+ str(int(np.median(trans[dataset][cor]['count']))) +" / "+ str(int(np.median(trans[dataset][cor]['falseneg']))) +" / "+ str(int(np.median(trans[dataset][cor]['falsepos']))) for cor in correct]) + '\\\\'
+        print(out)
+        print("\\hline")
+    print("\\end{tabular}")
 
 
 

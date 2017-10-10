@@ -778,7 +778,7 @@ class MAR(object):
     def susp(self,clf):
         thres_pos = 1
         thres_neg = 0.5
-        length_pos = 10
+        length_pos = 5
         length_neg = 10
 
         poses = np.where(np.array(self.body['code']) == "yes")[0]
