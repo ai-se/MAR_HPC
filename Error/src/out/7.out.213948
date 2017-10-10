@@ -1,0 +1,50 @@
+7: Hall.csv: none: {'count': 2660, 'truepos': 97, 'falseneg': 7, 'unknownyes': 2, 'falsepos': 253, 'unique': 2660}
+7: Hall.csv: three: {'count': 1000, 'truepos': 100, 'falseneg': 1, 'unknownyes': 5, 'falsepos': 13, 'unique': 460}
+7: Hall.csv: machine: {'count': 540, 'truepos': 97, 'falseneg': 4, 'unknownyes': 5, 'falsepos': 19, 'unique': 400}
+7: Wahono.csv: none: {'count': 3990, 'truepos': 57, 'falseneg': 3, 'unknownyes': 2, 'falsepos': 399, 'unique': 3990}
+7: Wahono.csv: three: {'count': 3986, 'truepos': 58, 'falseneg': 2, 'unknownyes': 2, 'falsepos': 54, 'unique': 1840}
+7: Wahono.csv: machine: {'count': 1614, 'truepos': 53, 'falseneg': 6, 'unknownyes': 3, 'falsepos': 24, 'unique': 1210}
+7: Danijel.csv: none: {'count': 2300, 'truepos': 41, 'falseneg': 5, 'unknownyes': 2, 'falsepos': 225, 'unique': 2300}
+7: Danijel.csv: three: {'count': 2214, 'truepos': 45, 'falseneg': 0, 'unknownyes': 3, 'falsepos': 31, 'unique': 1010}
+7: Danijel.csv: machine: {'count': 975, 'truepos': 43, 'falseneg': 2, 'unknownyes': 3, 'falsepos': 13, 'unique': 760}
+7: K_all3.csv: none: {'count': 440, 'truepos': 29, 'falseneg': 4, 'unknownyes': 12, 'falsepos': 39, 'unique': 440}
+7: K_all3.csv: three: {'count': 957, 'truepos': 36, 'falseneg': 1, 'unknownyes': 8, 'falsepos': 12, 'unique': 440}
+7: K_all3.csv: machine: {'count': 461, 'truepos': 36, 'falseneg': 0, 'unknownyes': 9, 'falsepos': 13, 'unique': 360}
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2b1-1>
+Subject: Job 213948: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 7> Done
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 7> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2>.
+Job was executed on host(s) <2*n2b1-1>, in queue <single_chassis>, as user <zyu9> in cluster <henry2>.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Mon Oct  9 14:05:23 2017
+Results reported at Mon Oct  9 19:37:00 2017
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 7
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :  21601.71 sec.
+    Max Memory :       197 MB
+    Max Swap   :      1213 MB
+
+    Max Processes  :         3
+    Max Threads    :         8
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/7.err.213948> for stderr output of this job.
+
