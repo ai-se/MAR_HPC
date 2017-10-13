@@ -761,7 +761,7 @@ class MAR(object):
 
     def code_random(self,id,label):
         import random
-        error_rate = 0.05
+        error_rate = 0.1
         if label=='yes':
             if random.random()<error_rate:
                 new = 'no'
@@ -780,7 +780,7 @@ class MAR(object):
 
     def code_random2(self,id,label):
         import random
-        error_rate = 0.05
+        error_rate = 0.1
         if label=='yes':
             if random.random()<error_rate:
                 new = 'no'
@@ -812,7 +812,7 @@ class MAR(object):
 
     def code_random3(self,id,label):
         import random
-        error_rate = 0.05
+        error_rate = 0.1
         if label=='yes':
             if random.random()<error_rate:
                 new = 'no'

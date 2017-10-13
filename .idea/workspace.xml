@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c89cd52c-5796-4d0c-9c84-f3cc69bf3090" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Error/src/mar.py" afterPath="$PROJECT_DIR$/Error/src/mar.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Error/src/runner.py" afterPath="$PROJECT_DIR$/Error/src/runner.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mar.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mar.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Error/src/mar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="739" column="31" lean-forward="true" selection-start-line="739" selection-start-column="31" selection-end-line="739" selection-end-column="31" />
+            <state relative-caret-position="-792">
+              <caret line="775" column="36" lean-forward="false" selection-start-line="775" selection-start-column="36" selection-end-line="775" selection-end-column="36" />
               <folding>
                 <element signature="e#340#547#0" expanded="false" />
                 <element signature="e#589#1428#0" expanded="false" />
@@ -117,34 +116,34 @@
                 <element signature="e#29067#29321#0" expanded="false" />
                 <element signature="e#29125#29299#0" expanded="false" />
                 <element signature="e#29393#29466#0" expanded="false" />
-                <element signature="e#29965#30215#0" expanded="false" />
-                <element signature="e#30262#30402#0" expanded="false" />
-                <element signature="e#32076#33395#0" expanded="false" />
-                <element signature="e#33441#34806#0" expanded="false" />
-                <element signature="e#33448#33530#0" expanded="false" />
-                <element signature="e#33579#33742#0" expanded="false" />
-                <element signature="e#33961#34434#0" expanded="false" />
-                <element signature="e#34176#34399#0" expanded="false" />
-                <element signature="e#34280#34351#0" expanded="false" />
-                <element signature="e#34842#34911#0" expanded="false" />
-                <element signature="e#34962#35060#0" expanded="false" />
-                <element signature="e#35123#35520#0" expanded="false" />
-                <element signature="e#35395#35479#0" expanded="false" />
-                <element signature="e#35555#36494#0" expanded="false" />
-                <element signature="e#35759#35974#0" expanded="false" />
-                <element signature="e#35863#35934#0" expanded="false" />
-                <element signature="e#36229#36448#0" expanded="false" />
-                <element signature="e#36333#36408#0" expanded="false" />
+                <element signature="e#30054#30304#0" expanded="false" />
+                <element signature="e#30351#30491#0" expanded="false" />
+                <element signature="e#32942#34261#0" expanded="false" />
+                <element signature="e#34307#35672#0" expanded="false" />
+                <element signature="e#34314#34396#0" expanded="false" />
+                <element signature="e#34445#34608#0" expanded="false" />
+                <element signature="e#34827#35300#0" expanded="false" />
+                <element signature="e#35042#35265#0" expanded="false" />
+                <element signature="e#35146#35217#0" expanded="false" />
+                <element signature="e#35708#35777#0" expanded="false" />
+                <element signature="e#35828#35926#0" expanded="false" />
+                <element signature="e#35989#36386#0" expanded="false" />
+                <element signature="e#36261#36345#0" expanded="false" />
+                <element signature="e#36421#37360#0" expanded="false" />
+                <element signature="e#36625#36840#0" expanded="false" />
+                <element signature="e#36729#36800#0" expanded="false" />
+                <element signature="e#37095#37314#0" expanded="false" />
+                <element signature="e#37199#37274#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="runner.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="runner.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Error/src/runner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1474">
-              <caret line="1593" column="68" lean-forward="true" selection-start-line="1593" selection-start-column="68" selection-end-line="1593" selection-end-column="68" />
+            <state relative-caret-position="-395">
+              <caret line="1581" column="8" lean-forward="false" selection-start-line="1581" selection-start-column="8" selection-end-line="1581" selection-end-column="8" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -162,6 +161,7 @@
       <list>
         <option value="$PROJECT_DIR$/Error/src/mar.py" />
         <option value="$PROJECT_DIR$/Error/src/runner.py" />
+        <option value="$PROJECT_DIR$/Error/src/run_hpc.sh" />
       </list>
     </option>
   </component>
@@ -244,7 +244,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1934" height="1042" extended-state="0" />
+    <frame x="-11" y="-11" width="1934" height="1042" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24986681" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -274,20 +274,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Error/src/runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1474">
-          <caret line="1593" column="68" lean-forward="true" selection-start-line="1593" selection-start-column="68" selection-end-line="1593" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Error/src/mar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="739" column="31" lean-forward="true" selection-start-line="739" selection-start-column="31" selection-end-line="739" selection-end-column="31" />
+        <state relative-caret-position="-792">
+          <caret line="775" column="36" lean-forward="false" selection-start-line="775" selection-start-column="36" selection-end-line="775" selection-end-column="36" />
           <folding>
             <element signature="e#340#547#0" expanded="false" />
             <element signature="e#589#1428#0" expanded="false" />
@@ -382,24 +372,42 @@
             <element signature="e#29067#29321#0" expanded="false" />
             <element signature="e#29125#29299#0" expanded="false" />
             <element signature="e#29393#29466#0" expanded="false" />
-            <element signature="e#29965#30215#0" expanded="false" />
-            <element signature="e#30262#30402#0" expanded="false" />
-            <element signature="e#32076#33395#0" expanded="false" />
-            <element signature="e#33441#34806#0" expanded="false" />
-            <element signature="e#33448#33530#0" expanded="false" />
-            <element signature="e#33579#33742#0" expanded="false" />
-            <element signature="e#33961#34434#0" expanded="false" />
-            <element signature="e#34176#34399#0" expanded="false" />
-            <element signature="e#34280#34351#0" expanded="false" />
-            <element signature="e#34842#34911#0" expanded="false" />
-            <element signature="e#34962#35060#0" expanded="false" />
-            <element signature="e#35123#35520#0" expanded="false" />
-            <element signature="e#35395#35479#0" expanded="false" />
-            <element signature="e#35555#36494#0" expanded="false" />
-            <element signature="e#35759#35974#0" expanded="false" />
-            <element signature="e#35863#35934#0" expanded="false" />
-            <element signature="e#36229#36448#0" expanded="false" />
-            <element signature="e#36333#36408#0" expanded="false" />
+            <element signature="e#30054#30304#0" expanded="false" />
+            <element signature="e#30351#30491#0" expanded="false" />
+            <element signature="e#32942#34261#0" expanded="false" />
+            <element signature="e#34307#35672#0" expanded="false" />
+            <element signature="e#34314#34396#0" expanded="false" />
+            <element signature="e#34445#34608#0" expanded="false" />
+            <element signature="e#34827#35300#0" expanded="false" />
+            <element signature="e#35042#35265#0" expanded="false" />
+            <element signature="e#35146#35217#0" expanded="false" />
+            <element signature="e#35708#35777#0" expanded="false" />
+            <element signature="e#35828#35926#0" expanded="false" />
+            <element signature="e#35989#36386#0" expanded="false" />
+            <element signature="e#36261#36345#0" expanded="false" />
+            <element signature="e#36421#37360#0" expanded="false" />
+            <element signature="e#36625#36840#0" expanded="false" />
+            <element signature="e#36729#36800#0" expanded="false" />
+            <element signature="e#37095#37314#0" expanded="false" />
+            <element signature="e#37199#37274#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Error/src/run_hpc.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Error/src/runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-395">
+          <caret line="1581" column="8" lean-forward="false" selection-start-line="1581" selection-start-column="8" selection-end-line="1581" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
