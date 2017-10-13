@@ -1,0 +1,46 @@
+10: Hall.csv: none: {'count': 1420, 'truepos': 95, 'falseneg': 7, 'unknownyes': 4, 'falsepos': 54, 'unique': 1420}
+10: Hall.csv: three: {'count': 1153, 'truepos': 102, 'falseneg': 0, 'unknownyes': 4, 'falsepos': 4, 'unique': 550}
+10: Hall.csv: machine: {'count': 762, 'truepos': 98, 'falseneg': 4, 'unknownyes': 4, 'falsepos': 3, 'unique': 550}
+10: Wahono.csv: none: {'count': 1950, 'truepos': 55, 'falseneg': 3, 'unknownyes': 4, 'falsepos': 98, 'unique': 1950}
+10: Wahono.csv: three: {'count': 2775, 'truepos': 59, 'falseneg': 0, 'unknownyes': 3, 'falsepos': 13, 'unique': 1330}
+10: Wahono.csv: machine: {'count': 1294, 'truepos': 58, 'falseneg': 0, 'unknownyes': 4, 'falsepos': 2, 'unique': 1010}
+10: Danijel.csv: none: {'count': 690, 'truepos': 42, 'falseneg': 3, 'unknownyes': 3, 'falsepos': 34, 'unique': 690}
+10: Danijel.csv: three: {'count': 1879, 'truepos': 43, 'falseneg': 1, 'unknownyes': 4, 'falsepos': 9, 'unique': 900}
+10: Danijel.csv: machine: 
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2d2-9>
+Subject: Job 244073: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 10> Exited
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 10> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2>.
+Job was executed on host(s) <2*n2d2-9>, in queue <single_chassis>, as user <zyu9> in cluster <henry2>.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Thu Oct 12 08:46:58 2017
+Results reported at Thu Oct 12 10:03:16 2017
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 10
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time   :   5707.32 sec.
+    Max Memory :       167 MB
+    Max Swap   :      1185 MB
+
+    Max Processes  :         3
+    Max Threads    :         8
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/10.err.244073> for stderr output of this job.
+

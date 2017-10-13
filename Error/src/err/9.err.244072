@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "runner.py", line 1638, in <module>
+    eval(cmd())
+  File "<string>", line 1, in <module>
+  File "runner.py", line 1592, in error_hpcc
+    result = BM25(file,queries[file],'est','random', 5)
+  File "runner.py", line 1170, in BM25
+    a,b,c,d =read.train(weighting=True,pne=True)
+  File "/home/zyu9/projects/MAR_HPC/Error/src/mar.py", line 547, in train
+    susp, conf = self.susp(clf)
+  File "/home/zyu9/projects/MAR_HPC/Error/src/mar.py", line 794, in susp
+    prob_pos = clf.predict_proba(self.csr_mat[poses])[:,pos_at]
+  File "/share/tjmenzie/zyu9/miniconda2/lib/python2.7/site-packages/sklearn/svm/base.py", line 594, in _predict_proba
+    X = self._validate_for_predict(X)
+  File "/share/tjmenzie/zyu9/miniconda2/lib/python2.7/site-packages/sklearn/svm/base.py", line 439, in _validate_for_predict
+    X = check_array(X, accept_sparse='csr', dtype=np.float64, order="C")
+  File "/share/tjmenzie/zyu9/miniconda2/lib/python2.7/site-packages/sklearn/utils/validation.py", line 431, in check_array
+    context))
+ValueError: Found array with 0 sample(s) (shape=(0, 4000)) while a minimum of 1 is required.

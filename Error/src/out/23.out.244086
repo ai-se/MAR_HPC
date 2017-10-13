@@ -1,0 +1,43 @@
+23: Hall.csv: none: {'count': 940, 'truepos': 99, 'falseneg': 3, 'unknownyes': 4, 'falsepos': 30, 'unique': 940}
+23: Hall.csv: three: {'count': 971, 'truepos': 101, 'falseneg': 0, 'unknownyes': 5, 'falsepos': 5, 'unique': 460}
+23: Hall.csv: machine: {'count': 744, 'truepos': 100, 'falseneg': 2, 'unknownyes': 4, 'falsepos': 2, 'unique': 530}
+23: Wahono.csv: none: {'count': 2300, 'truepos': 52, 'falseneg': 6, 'unknownyes': 4, 'falsepos': 119, 'unique': 2300}
+23: Wahono.csv: three: {'count': 3204, 'truepos': 60, 'falseneg': 0, 'unknownyes': 2, 'falsepos': 16, 'unique': 1530}
+23: Wahono.csv: machine: 
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2e1-6>
+Subject: Job 244086: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 23> Exited
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 23> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2>.
+Job was executed on host(s) <2*n2e1-6>, in queue <single_chassis>, as user <zyu9> in cluster <henry2>.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Thu Oct 12 08:46:58 2017
+Results reported at Thu Oct 12 10:00:22 2017
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 23
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time   :   4883.60 sec.
+    Max Memory :       169 MB
+    Max Swap   :      1187 MB
+
+    Max Processes  :         3
+    Max Threads    :         8
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/23.err.244086> for stderr output of this job.
+
