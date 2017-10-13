@@ -1579,7 +1579,7 @@ def error_hpcc(seed = 1):
     np.random.seed(int(seed))
     files = ["Hall.csv", "Wahono.csv", "Danijel.csv", "K_all3.csv"]
     queries = {"Hall.csv": 'defect_prediction', "Wahono.csv": 'defect_prediction', "Danijel.csv": 'defect_prediction_metrics', "K_all3.csv": "systematic review"}
-    correct = ['none', 'three', 'machine']
+    correct = ['none', 'three', 'machine', 'machine2', 'machine3']
 
     results={}
     for file in files:
@@ -1590,6 +1590,10 @@ def error_hpcc(seed = 1):
                 result = BM25(file,queries[file],'est','three')
             elif cor == 'machine':
                 result = BM25(file,queries[file],'est','random', 5)
+            elif cor == 'machine2':
+                result = BM25(file,queries[file],'est','random2', 5)
+            elif cor == 'machine3':
+                result = BM25(file,queries[file],'est','random3', 5)
             else:
                 result = BM25(file,queries[file],'est','random')
 

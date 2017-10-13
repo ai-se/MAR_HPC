@@ -738,6 +738,10 @@ class MAR(object):
             self.code_random(id, self.body['label'][id])
         elif error=='three':
             self.code_three(id, self.body['label'][id])
+        elif error=='random2':
+            self.code_random2(id, self.body['label'][id])
+        elif error=='random3':
+            self.code_random3(id, self.body['label'][id])
         else:
             self.code(id, self.body['label'][id])
 
@@ -768,11 +772,64 @@ class MAR(object):
                 new = 'yes'
             else:
                 new = 'no'
-        if new == self.body["code"][id]:
+        if new == self.body["code"][id] or self.body["count"][id] == 2:
             self.body['fixed'][id]=1
         self.body["code"][id] = new
         self.body["time"][id] = time.time()
         self.body["count"][id] = self.body["count"][id] + 1
+
+    def code_random2(self,id,label):
+        import random
+        error_rate = 0.05
+        if label=='yes':
+            if random.random()<error_rate:
+                new = 'no'
+            else:
+                new = 'yes'
+        else:
+            if random.random()<error_rate:
+                new = 'yes'
+            else:
+                new = 'no'
+        if new == self.body["code"][id] or self.body["count"][id] == 2:
+            self.body['fixed'][id]=1
+        elif self.body["code"][id]=='yes':
+            self.body["count"][id] = self.body["count"][id] + 1
+            if label == 'yes':
+                if random.random() < error_rate:
+                    new = 'no'
+                else:
+                    new = 'yes'
+            else:
+                if random.random() < error_rate:
+                    new = 'yes'
+                else:
+                    new = 'no'
+            self.body['fixed'][id] = 1
+        self.body["code"][id] = new
+        self.body["time"][id] = time.time()
+        self.body["count"][id] = self.body["count"][id] + 1
+
+    def code_random3(self,id,label):
+        import random
+        error_rate = 0.05
+        if label=='yes':
+            if random.random()<error_rate:
+                new = 'no'
+            else:
+                new = 'yes'
+        else:
+            if random.random()<error_rate:
+                new = 'yes'
+            else:
+                new = 'no'
+        if new == self.body["code"][id] or self.body["count"][id]==2:
+            self.body['fixed'][id]=1
+        self.body["code"][id] = new
+        self.body["time"][id] = time.time()
+        self.body["count"][id] = self.body["count"][id] + 1
+        if self.body["code"][id]=='yes' and self.body['fixed'][id]==0:
+            self.code_random3(id,label)
 
     ## Get suspecious codes
     def susp(self,clf):
