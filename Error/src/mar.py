@@ -545,7 +545,8 @@ class MAR(object):
         if self.round==self.interval:
             self.round=0
             susp, conf = self.susp(clf)
-            return susp, conf, susp, conf
+            if len(susp) > 0:
+                return susp, conf, susp, conf
         else:
             self.round = self.round + 1
         #####################################################
@@ -846,21 +847,25 @@ class MAR(object):
         poses = np.array(poses)[np.where(np.array(self.body['fixed'])[poses] == 0)[0]]
         negs = np.array(negs)[np.where(np.array(self.body['fixed'])[negs] == 0)[0]]
 
-
-        pos_at = list(clf.classes_).index("yes")
-        prob_pos = clf.predict_proba(self.csr_mat[poses])[:,pos_at]
-        se_pos = np.argsort(prob_pos)[:length_pos]
-        se_pos = [s for s in se_pos if prob_pos[s]<thres_pos]
-        sel_pos = poses[se_pos]
+        if len(poses)>0:
+            pos_at = list(clf.classes_).index("yes")
+            prob_pos = clf.predict_proba(self.csr_mat[poses])[:,pos_at]
+            se_pos = np.argsort(prob_pos)[:length_pos]
+            se_pos = [s for s in se_pos if prob_pos[s]<thres_pos]
+            sel_pos = poses[se_pos]
+        else:
+            sel_pos = []
         # print(np.array(self.body['label'])[sel_pos])
 
-        neg_at = list(clf.classes_).index("no")
-        prob_neg = clf.predict_proba(self.csr_mat[negs])[:,neg_at]
-        se_neg = np.argsort(prob_neg)[:length_neg]
-        se_neg = [s for s in se_neg if prob_neg[s]<thres_neg]
-        sel_neg = negs[se_neg]
+        if len(negs)>0:
+            neg_at = list(clf.classes_).index("no")
+            prob_neg = clf.predict_proba(self.csr_mat[negs])[:,neg_at]
+            se_neg = np.argsort(prob_neg)[:length_neg]
+            se_neg = [s for s in se_neg if prob_neg[s]<thres_neg]
+            sel_neg = negs[se_neg]
+        else:
+            sel_neg = []
         # print(np.array(self.body['label'])[sel_neg])
-
 
         return sel_pos.tolist() + sel_neg.tolist(), prob_pos[se_pos].tolist() + prob_neg[se_neg].tolist()
 
