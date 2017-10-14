@@ -1,0 +1,42 @@
+0: Hall.csv: none: {'count': 2930, 'truepos': 92, 'falseneg': 10, 'unknownyes': 4, 'falsepos': 274, 'unique': 2930}
+0: Hall.csv: three: {'count': 1542, 'truepos': 99, 'falseneg': 3, 'unknownyes': 4, 'falsepos': 15, 'unique': 710}
+0: Hall.csv: machine: {'count': 730, 'truepos': 94, 'falseneg': 8, 'unknownyes': 4, 'falsepos': 10, 'unique': 510}
+0: Hall.csv: machine2: {'count': 874, 'truepos': 96, 'falseneg': 4, 'unknownyes': 6, 'falsepos': 14, 'unique': 590}
+0: Hall.csv: machine3: 
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2a1-10>
+Subject: Job 262446: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 0> Exited
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 0> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2>.
+Job was executed on host(s) <2*n2a1-10>, in queue <single_chassis>, as user <zyu9> in cluster <henry2>.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Fri Oct 13 17:19:03 2017
+Results reported at Fri Oct 13 18:45:21 2017
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 0
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time   :   6141.02 sec.
+    Max Memory :       175 MB
+    Max Swap   :      1191 MB
+
+    Max Processes  :         3
+    Max Threads    :         8
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/0.err.262446> for stderr output of this job.
+
