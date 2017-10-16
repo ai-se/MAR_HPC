@@ -1143,10 +1143,10 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
 
     while True:
         pos, neg, total = read.get_numbers()
-        # try:
-        #     print("%d, %d, %d" %(pos,pos+neg, read.est_num))
-        # except:
-        #     print("%d, %d" % (pos, pos + neg))
+        try:
+            print("%d, %d, %d" %(pos,pos+neg, read.est_num))
+        except:
+            print("%d, %d" % (pos, pos + neg))
 
         if pos < starting or pos+neg<thres:
             for id in read.BM25_get():
@@ -1598,7 +1598,7 @@ def error_hpcc(seed = 1):
                 result = BM25(file,queries[file],'est','random')
 
             results[file][cor] = analyze(result)
-    with open("../dump/error_hpcc5.pickle","a") as handle:
+    with open("../dump/error_hpcc10.pickle","a") as handle:
         pickle.dump(results,handle)
 
 def error_summary():
@@ -1625,9 +1625,9 @@ def error_summary():
 
     ####draw table
 
-    print("\\begin{tabular}{ |l|c|c|c| }")
+    print("\\begin{tabular}{ |l|"+"c|"*len(correct)+" }")
     print("\\hline")
-    print("  & none & three & machine  \\\\")
+    print("  & "+" & ".join(correct)+"  \\\\")
     print("\\hline")
     for dataset in files:
         out = dataset.split('.')[0]+" & " + ' & '.join([str(int(np.median(trans[dataset][cor]['truepos'])))+" / "+ str(int(np.median(trans[dataset][cor]['count']))) +" / "+ str(int(np.median(trans[dataset][cor]['falseneg']))) +" / "+ str(int(np.median(trans[dataset][cor]['falsepos']))) for cor in correct]) + '\\\\'
