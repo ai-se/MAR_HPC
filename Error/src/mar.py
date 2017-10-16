@@ -762,7 +762,7 @@ class MAR(object):
 
     def code_random(self,id,label):
         import random
-        error_rate = 0.1
+        error_rate = 0.05
         if label=='yes':
             if random.random()<error_rate:
                 new = 'no'
@@ -781,7 +781,7 @@ class MAR(object):
 
     def code_random2(self,id,label):
         import random
-        error_rate = 0.1
+        error_rate = 0.05
         if label=='yes':
             if random.random()<error_rate:
                 new = 'no'
@@ -813,7 +813,7 @@ class MAR(object):
 
     def code_random3(self,id,label):
         import random
-        error_rate = 0.1
+        error_rate = 0.05
         if label=='yes':
             if random.random()<error_rate:
                 new = 'no'
@@ -854,7 +854,7 @@ class MAR(object):
             se_pos = [s for s in se_pos if prob_pos[s]<thres_pos]
             sel_pos = poses[se_pos]
         else:
-            sel_pos = []
+            sel_pos = np.array([])
         # print(np.array(self.body['label'])[sel_pos])
 
         if len(negs)>0:
@@ -864,10 +864,13 @@ class MAR(object):
             se_neg = [s for s in se_neg if prob_neg[s]<thres_neg]
             sel_neg = negs[se_neg]
         else:
-            sel_neg = []
+            sel_neg = np.array([])
         # print(np.array(self.body['label'])[sel_neg])
-
-        return sel_pos.tolist() + sel_neg.tolist(), prob_pos[se_pos].tolist() + prob_neg[se_neg].tolist()
+	try:
+	    probs = prob_pos[se_pos].tolist() + prob_neg[se_neg].tolist()
+	except:
+	    probs = []
+        return sel_pos.tolist() + sel_neg.tolist(), probs
 
 
     ## Plot ##

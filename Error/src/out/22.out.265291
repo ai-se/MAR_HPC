@@ -1,0 +1,58 @@
+22: Hall.csv: none: {'count': 1450, 'truepos': 99, 'falseneg': 3, 'unknownyes': 4, 'falsepos': 68, 'unique': 1450}
+22: Hall.csv: three: {'count': 1178, 'truepos': 99, 'falseneg': 3, 'unknownyes': 4, 'falsepos': 2, 'unique': 560}
+22: Hall.csv: machine: {'count': 591, 'truepos': 99, 'falseneg': 2, 'unknownyes': 5, 'falsepos': 3, 'unique': 420}
+22: Hall.csv: machine2: {'count': 727, 'truepos': 100, 'falseneg': 1, 'unknownyes': 5, 'falsepos': 4, 'unique': 510}
+22: Hall.csv: machine3: {'count': 628, 'truepos': 98, 'falseneg': 4, 'unknownyes': 4, 'falsepos': 1, 'unique': 430}
+22: Wahono.csv: none: {'count': 1620, 'truepos': 54, 'falseneg': 3, 'unknownyes': 5, 'falsepos': 63, 'unique': 1620}
+22: Wahono.csv: three: {'count': 2658, 'truepos': 55, 'falseneg': 4, 'unknownyes': 3, 'falsepos': 7, 'unique': 1270}
+22: Wahono.csv: machine: {'count': 1544, 'truepos': 58, 'falseneg': 1, 'unknownyes': 3, 'falsepos': 3, 'unique': 1200}
+22: Wahono.csv: machine2: {'count': 1354, 'truepos': 58, 'falseneg': 1, 'unknownyes': 3, 'falsepos': 4, 'unique': 1010}
+22: Wahono.csv: machine3: {'count': 1624, 'truepos': 59, 'falseneg': 1, 'unknownyes': 2, 'falsepos': 4, 'unique': 1270}
+22: Danijel.csv: none: {'count': 1040, 'truepos': 44, 'falseneg': 2, 'unknownyes': 2, 'falsepos': 36, 'unique': 1040}
+22: Danijel.csv: three: {'count': 1722, 'truepos': 45, 'falseneg': 0, 'unknownyes': 3, 'falsepos': 4, 'unique': 820}
+22: Danijel.csv: machine: {'count': 1073, 'truepos': 44, 'falseneg': 1, 'unknownyes': 3, 'falsepos': 2, 'unique': 820}
+22: Danijel.csv: machine2: {'count': 1071, 'truepos': 45, 'falseneg': 0, 'unknownyes': 3, 'falsepos': 3, 'unique': 810}
+22: Danijel.csv: machine3: {'count': 1006, 'truepos': 44, 'falseneg': 1, 'unknownyes': 3, 'falsepos': 0, 'unique': 790}
+22: K_all3.csv: none: {'count': 400, 'truepos': 34, 'falseneg': 1, 'unknownyes': 10, 'falsepos': 18, 'unique': 400}
+22: K_all3.csv: three: {'count': 860, 'truepos': 34, 'falseneg': 0, 'unknownyes': 11, 'falsepos': 4, 'unique': 410}
+22: K_all3.csv: machine: {'count': 517, 'truepos': 31, 'falseneg': 3, 'unknownyes': 11, 'falsepos': 1, 'unique': 410}
+22: K_all3.csv: machine2: {'count': 663, 'truepos': 36, 'falseneg': 1, 'unknownyes': 8, 'falsepos': 2, 'unique': 510}
+22: K_all3.csv: machine3: {'count': 532, 'truepos': 34, 'falseneg': 5, 'unknownyes': 6, 'falsepos': 2, 'unique': 440}
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2e1-2>
+Subject: Job 265291: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 22> Done
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 22> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2>.
+Job was executed on host(s) <2*n2e1-2>, in queue <single_chassis>, as user <zyu9> in cluster <henry2>.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Sun Oct 15 10:16:33 2017
+Results reported at Sun Oct 15 11:45:22 2017
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 22
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   7133.94 sec.
+    Max Memory :       169 MB
+    Max Swap   :      1188 MB
+
+    Max Processes  :         3
+    Max Threads    :         8
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/22.err.265291> for stderr output of this job.
+

@@ -1,0 +1,58 @@
+5: Hall.csv: none: {'count': 720, 'truepos': 95, 'falseneg': 7, 'unknownyes': 4, 'falsepos': 19, 'unique': 720}
+5: Hall.csv: three: {'count': 1196, 'truepos': 101, 'falseneg': 1, 'unknownyes': 4, 'falsepos': 4, 'unique': 570}
+5: Hall.csv: machine: {'count': 793, 'truepos': 102, 'falseneg': 0, 'unknownyes': 4, 'falsepos': 2, 'unique': 560}
+5: Hall.csv: machine2: {'count': 770, 'truepos': 101, 'falseneg': 1, 'unknownyes': 4, 'falsepos': 5, 'unique': 530}
+5: Hall.csv: machine3: {'count': 701, 'truepos': 100, 'falseneg': 2, 'unknownyes': 4, 'falsepos': 0, 'unique': 490}
+5: Wahono.csv: none: {'count': 1990, 'truepos': 61, 'falseneg': 0, 'unknownyes': 1, 'falsepos': 115, 'unique': 1990}
+5: Wahono.csv: three: {'count': 2768, 'truepos': 59, 'falseneg': 1, 'unknownyes': 2, 'falsepos': 4, 'unique': 1330}
+5: Wahono.csv: machine: {'count': 1369, 'truepos': 60, 'falseneg': 0, 'unknownyes': 2, 'falsepos': 6, 'unique': 1060}
+5: Wahono.csv: machine2: {'count': 1682, 'truepos': 58, 'falseneg': 1, 'unknownyes': 3, 'falsepos': 9, 'unique': 1260}
+5: Wahono.csv: machine3: {'count': 1466, 'truepos': 57, 'falseneg': 2, 'unknownyes': 3, 'falsepos': 5, 'unique': 1140}
+5: Danijel.csv: none: {'count': 1580, 'truepos': 44, 'falseneg': 3, 'unknownyes': 1, 'falsepos': 89, 'unique': 1580}
+5: Danijel.csv: three: {'count': 2104, 'truepos': 46, 'falseneg': 0, 'unknownyes': 2, 'falsepos': 6, 'unique': 1000}
+5: Danijel.csv: machine: {'count': 1111, 'truepos': 43, 'falseneg': 3, 'unknownyes': 2, 'falsepos': 3, 'unique': 860}
+5: Danijel.csv: machine2: {'count': 1245, 'truepos': 44, 'falseneg': 1, 'unknownyes': 3, 'falsepos': 3, 'unique': 930}
+5: Danijel.csv: machine3: {'count': 925, 'truepos': 44, 'falseneg': 1, 'unknownyes': 3, 'falsepos': 0, 'unique': 720}
+5: K_all3.csv: none: {'count': 510, 'truepos': 32, 'falseneg': 5, 'unknownyes': 8, 'falsepos': 26, 'unique': 510}
+5: K_all3.csv: three: {'count': 1083, 'truepos': 34, 'falseneg': 0, 'unknownyes': 11, 'falsepos': 2, 'unique': 510}
+5: K_all3.csv: machine: {'count': 522, 'truepos': 33, 'falseneg': 3, 'unknownyes': 9, 'falsepos': 1, 'unique': 410}
+5: K_all3.csv: machine2: {'count': 609, 'truepos': 37, 'falseneg': 0, 'unknownyes': 8, 'falsepos': 3, 'unique': 460}
+5: K_all3.csv: machine3: {'count': 714, 'truepos': 37, 'falseneg': 1, 'unknownyes': 7, 'falsepos': 2, 'unique': 610}
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2b1-7>
+Subject: Job 265274: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 5> Done
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 5> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2>.
+Job was executed on host(s) <2*n2b1-7>, in queue <single_chassis>, as user <zyu9> in cluster <henry2>.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Sun Oct 15 10:16:33 2017
+Results reported at Sun Oct 15 12:01:10 2017
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 5
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   8112.69 sec.
+    Max Memory :       173 MB
+    Max Swap   :      1191 MB
+
+    Max Processes  :         3
+    Max Threads    :         8
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/5.err.265274> for stderr output of this job.
+
