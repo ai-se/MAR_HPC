@@ -1624,7 +1624,7 @@ def error_summary():
                     trans[file][cor][key].append(results[i][file][cor][key])
 
     ####draw table
-    set_trace()
+
     print("\\begin{tabular}{ |l|"+"c|"*len(correct)+" }")
     print("\\hline")
     print("  & "+" & ".join(correct)+"  \\\\")

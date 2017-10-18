@@ -830,7 +830,7 @@ class MAR(object):
         self.body["time"][id] = time.time()
         self.body["count"][id] = self.body["count"][id] + 1
         if self.body["code"][id]=='yes' and self.body['fixed'][id]==0:
-            self.code_random3(id,label)
+            self.code_random2(id,label)
 
     ## Get suspecious codes
     def susp(self,clf):
