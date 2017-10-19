@@ -1159,7 +1159,7 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
             else:
                 if pos >= target:
                     break
-            if pos < 10:
+            if pos < read.enough:
                 for id in a:
                     read.code_error(id, error=error)
             else:
