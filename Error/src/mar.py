@@ -19,7 +19,8 @@ class MAR(object):
         self.atleast=100
         self.syn_thres = 0.8
         self.enable_est = True
-        self.interval = 500000000
+        self.interval = 5
+        self.er = 0.02
 
 
     def create(self,filename):
@@ -542,13 +543,14 @@ class MAR(object):
             clf.fit(self.csr_mat[sample], labels[sample])
 
         ## correct errors with human-machine disagreements ##
-        if self.round==self.interval:
-            self.round=0
-            susp, conf = self.susp(clf)
-            if len(susp) > 0:
-                return susp, conf, susp, conf
-        else:
-            self.round = self.round + 1
+        if self.er>0:
+            if self.round==self.interval:
+                self.round=0
+                susp, conf = self.susp(clf)
+                if len(susp) > 0:
+                    return susp, conf, susp, conf
+            else:
+                self.round = self.round + 1
         #####################################################
 
 
@@ -762,7 +764,7 @@ class MAR(object):
 
     def code_random(self,id,label):
         import random
-        error_rate = 0.1
+        error_rate = self.er
         if label=='yes':
             if random.random()<error_rate:
                 new = 'no'
@@ -781,7 +783,7 @@ class MAR(object):
 
     def code_random2(self,id,label):
         import random
-        error_rate = 0.1
+        error_rate = self.er
         if label=='yes':
             if random.random()<error_rate:
                 new = 'no'
@@ -813,7 +815,7 @@ class MAR(object):
 
     def code_random3(self,id,label):
         import random
-        error_rate = 0.1
+        error_rate = self.er
         if label=='yes':
             if random.random()<error_rate:
                 new = 'no'
