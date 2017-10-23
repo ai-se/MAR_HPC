@@ -19,7 +19,7 @@ class MAR(object):
         self.atleast=100
         self.syn_thres = 0.8
         self.enable_est = True
-        self.interval = 5
+        self.interval = 50000000
         self.er = 0.00
 
 
@@ -543,7 +543,7 @@ class MAR(object):
             clf.fit(self.csr_mat[sample], labels[sample])
 
         ## correct errors with human-machine disagreements ##
-        if self.er>0:
+        if self.interval<100:
             if self.round==self.interval:
                 self.round=0
                 susp, conf = self.susp(clf)
