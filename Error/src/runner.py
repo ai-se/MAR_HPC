@@ -1594,6 +1594,8 @@ def error_hpcc(seed = 1):
                 result = BM25(file,queries[file],'est','random2', 5)
             elif cor == 'machine3':
                 result = BM25(file,queries[file],'est','random3', 5)
+            elif cor == 'machine4':
+                result = BM25(file,queries[file],'est','random3', 1000)
             else:
                 result = BM25(file,queries[file],'est','random')
 
