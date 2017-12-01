@@ -1187,7 +1187,8 @@ def analyze(read):
     unknownyes = len(set(unknown) & set(yes))
     unique = len(read.body['code']) - len(unknown)
     count = sum(read.body['count'])
-    return {"falsepos": falsepos, "truepos": truepos, "falseneg": falseneg, "unknownyes": unknownyes, "unique": unique, "count": count}
+    correction = read.correction
+    return {"falsepos": falsepos, "truepos": truepos, "falseneg": falseneg, "unknownyes": unknownyes, "unique": unique, "count": count, "correction": correction}
 
 
 ############ scenarios ##########
