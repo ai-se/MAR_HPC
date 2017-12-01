@@ -35,6 +35,7 @@ class MAR(object):
         self.last_neg=0
         self.record_est={"x":[],"semi":[],"sigmoid":[]}
         self.round = 0
+        self.correction = 0
 
 
         try:
@@ -778,6 +779,8 @@ class MAR(object):
                 new = 'no'
         if new == self.body["code"][id] or self.body["count"][id] == 2:
             self.body['fixed'][id]=1
+        if self.body["code"][id]!='undetermined' and self.body["code"][id]!=self.body["label"][id] and new == self.body["label"][id]:
+            self.correction = self.correction+1
         self.body["code"][id] = new
         self.body["time"][id] = time.time()
         self.body["count"][id] = self.body["count"][id] + 1
@@ -795,6 +798,8 @@ class MAR(object):
                 new = 'yes'
             else:
                 new = 'no'
+        if self.body["code"][id]!='undetermined' and self.body["code"][id]!=self.body["label"][id] and new == self.body["label"][id]:
+            self.correction = self.correction+1
         if new == self.body["code"][id] or self.body["count"][id] == 2:
             self.body['fixed'][id]=1
         elif self.body["code"][id]=='yes':
@@ -827,6 +832,8 @@ class MAR(object):
                 new = 'yes'
             else:
                 new = 'no'
+        if self.body["code"][id]!='undetermined' and self.body["code"][id]!=self.body["label"][id] and new == self.body["label"][id]:
+            self.correction = self.correction+1
         if new == self.body["code"][id] or self.body["count"][id]==2:
             self.body['fixed'][id]=1
         self.body["code"][id] = new
@@ -860,9 +867,6 @@ class MAR(object):
         else:
             sel_pos = np.array([])
             print('null')
-
-
-
 
         if len(negs)>0:
             neg_at = list(clf.classes_).index("no")

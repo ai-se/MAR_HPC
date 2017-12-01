@@ -1594,8 +1594,6 @@ def error_hpcc(seed = 1):
                 result = BM25(file,queries[file],'est','random2', 5)
             elif cor == 'machine3':
                 result = BM25(file,queries[file],'est','random3', 5)
-            elif cor == 'machine4':
-                result = BM25(file,queries[file],'est','random3', 1000)
             else:
                 result = BM25(file,queries[file],'est','random')
 
@@ -1640,8 +1638,8 @@ def error_summary():
     print("  & "+" & ".join(correct)+"  \\\\")
     print("\\hline")
     for dataset in files:
-        out = dataset.split('.')[0]+" & " + ' & '.join([str(int(np.median(trans[dataset][cor]['truepos'])))+" / "+ str(int(np.median(trans[dataset][cor]['count']))) +" / "+ str(int(np.median(trans[dataset][cor]['falseneg']))) +" / "+ str(int(np.median(trans[dataset][cor]['falsepos']))) for cor in correct]) + '\\\\'
-        # out = dataset.split('.')[0]+" & " + ' & '.join([str(round(np.median(np.array(trans[dataset][cor]['truepos'])/(np.array(trans[dataset][cor]['truepos'])+np.array(trans[dataset][cor]['falsepos']))),2))+" / "+str(round(np.median(np.array(trans[dataset][cor]['truepos'])/total[dataset]),2))+" / "+str(int(np.median(trans[dataset][cor]['count']))) for cor in correct]) + '\\\\'
+        # out = dataset.split('.')[0]+" & " + ' & '.join([str(int(np.median(trans[dataset][cor]['truepos'])))+" / "+ str(int(np.median(trans[dataset][cor]['count']))) +" / "+ str(int(np.median(trans[dataset][cor]['falseneg']))) +" / "+ str(int(np.median(trans[dataset][cor]['falsepos']))) for cor in correct]) + '\\\\'
+        out = dataset.split('.')[0]+" & " + ' & '.join([str(round(np.median(np.array(trans[dataset][cor]['truepos'])/(np.array(trans[dataset][cor]['truepos'])+np.array(trans[dataset][cor]['falsepos']))),2))+" / "+str(round(np.median(np.array(trans[dataset][cor]['truepos'])/total[dataset]),2))+" / "+str(int(np.median(trans[dataset][cor]['count']))) for cor in correct]) + '\\\\'
         print(out)
         print("\\hline")
     print("\\end{tabular}")
