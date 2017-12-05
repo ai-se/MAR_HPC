@@ -20,7 +20,7 @@ class MAR(object):
         self.syn_thres = 0.8
         self.enable_est = True
         self.interval = 50000000
-        self.er = 0.10
+        self.er = 0.02
 
 
     def create(self,filename):
@@ -28,7 +28,7 @@ class MAR(object):
         self.name=self.filename.split(".")[0]
         self.flag=True
         self.hasLabel=True
-        self.record={"x":[],"pos":[]}
+        self.record={"x":[],"pos":[],"true_pos":[],"false_pos":[],"false_neg":[]}
         self.body={}
         self.est=[]
         self.last_pos=0
@@ -228,6 +228,20 @@ class MAR(object):
         self.pool = np.where(np.array(self.body['code']) == "undetermined")[0]
         self.labeled = list(set(range(len(self.body['code']))) - set(self.pool))
         return pos, neg, total
+
+    def get_error(self):
+        poses = np.where(np.array(self.body['code']) == "yes")[0]
+        negs = np.where(np.array(self.body['code']) == "no")[0]
+        actual_pos = np.where(np.array(self.body['label']) == "yes")[0]
+        true_pos = len(set(poses).intersection(set(actual_pos)))
+        false_neg = len(set(negs).intersection(set(actual_pos)))
+        false_pos = len(poses)-true_pos
+
+        self.record['x'].append(int(len(poses)+len(negs)))
+        self.record['pos'].append(int(len(poses)))
+        self.record['false_neg'].append(int(false_neg))
+        self.record['true_pos'].append(int(true_pos))
+        self.record['false_pos'].append(int(false_pos))
 
     def export(self):
         fields = ["Document Title", "Abstract", "Year", "PDF Link", "label", "code","time"]
