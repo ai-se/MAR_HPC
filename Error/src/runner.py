@@ -1607,7 +1607,7 @@ def error_summary():
     correct = ['none', 'three', 'machine', 'machine2', 'machine3']
     total = {"Hall.csv": 106, "Wahono.csv": 62, "Danijel.csv": 48, "K_all3.csv": 44}
     results = []
-    with open("../dump/error_hpcc10.pickle","r") as handle:
+    with open("../dump/error_hpcc2.pickle","r") as handle:
         # result = pickle.load(handle)
         # result2 = pickle.load(handle)
         for i in xrange(30):
