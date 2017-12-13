@@ -1599,7 +1599,7 @@ def error_hpcc(seed = 1):
                 result = BM25(file,queries[file],'est','random')
 
             results[file][cor] = analyze(result)
-    with open("../dump/error_hpcc10.pickle","a") as handle:
+    with open("../dump/error_hpcc0.pickle","a") as handle:
         pickle.dump(results,handle)
 
 def error_summary():
