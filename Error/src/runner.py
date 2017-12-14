@@ -1591,15 +1591,15 @@ def error_hpcc(seed = 1):
                 result = BM25(file,queries[file],'est','three')
             elif cor == 'machine':
                 result = BM25(file,queries[file],'est','random', 5)
-            elif cor == 'machine2':
-                result = BM25(file,queries[file],'est','random2', 5)
-            elif cor == 'machine3':
-                result = BM25(file,queries[file],'est','random3', 5)
+            # elif cor == 'machine2':
+            #     result = BM25(file,queries[file],'est','random2', 5)
+            # elif cor == 'machine3':
+            #     result = BM25(file,queries[file],'est','random3', 5)
             else:
                 result = BM25(file,queries[file],'est','random')
 
             results[file][cor] = analyze(result)
-    with open("../dump/error_hpcc0.pickle","a") as handle:
+    with open("../dump/error_new_hpcc30.pickle","a") as handle:
         pickle.dump(results,handle)
 
 def error_summary():

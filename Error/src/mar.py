@@ -20,7 +20,7 @@ class MAR(object):
         self.syn_thres = 0.8
         self.enable_est = True
         self.interval = 50000000
-        self.er = 0.00
+        self.er = 0.30
 
 
     def create(self,filename):
@@ -778,6 +778,29 @@ class MAR(object):
             self.code_random(id,label)
 
     def code_random(self,id,label):
+        import random
+        poses = Counter(self.body['label'])["yes"]
+        negs = Counter(self.body['label'])["no"]
+        error_rate = self.er
+        if label=='yes':
+            if random.random()<error_rate:
+                new = 'no'
+            else:
+                new = 'yes'
+        else:
+            if random.random()<(error_rate*poses/(negs)):
+                new = 'yes'
+            else:
+                new = 'no'
+        if new == self.body["code"][id] or self.body["count"][id] == 2:
+            self.body['fixed'][id]=1
+        if self.body["code"][id]!='undetermined' and self.body["code"][id]!=self.body["label"][id] and new == self.body["label"][id]:
+            self.correction = self.correction+1
+        self.body["code"][id] = new
+        self.body["time"][id] = time.time()
+        self.body["count"][id] = self.body["count"][id] + 1
+
+    def code_random1(self,id,label):
         import random
 
         error_rate = self.er
