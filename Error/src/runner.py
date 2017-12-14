@@ -1144,10 +1144,22 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
 
     while True:
         pos, neg, total = read.get_numbers()
-        try:
-            print("%d, %d, %d" %(pos,pos+neg, read.est_num))
-        except:
-            print("%d, %d" % (pos, pos + neg))
+        # try:
+        #     print("%d, %d, %d" %(pos,pos+neg, read.est_num))
+        # except:
+        #     print("%d, %d" % (pos, pos + neg))
+
+        if pos + neg >= total:
+            if stop=='knee' and error=='random':
+                coded = np.where(np.array(read.body['code']) != "undetermined")[0]
+                seq = coded[np.argsort(read.body['time'][coded])]
+                part1 = set(seq[:read.kneepoint * read.step]) & set(
+                    np.where(np.array(read.body['code']) == "no")[0])
+                part2 = set(seq[read.kneepoint * read.step:]) & set(
+                    np.where(np.array(read.body['code']) == "yes")[0])
+                for id in part1 | part2:
+                    read.code_error(id, error=error)
+            break
 
         if pos < starting or pos+neg<thres:
             for id in read.BM25_get():
@@ -1157,6 +1169,19 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
             if stop == 'est':
                 if stopat * read.est_num <= pos:
                     break
+            elif stop == 'knee':
+                if pos>0:
+                    if read.knee():
+                        if error=='random':
+                            coded = np.where(np.array(read.body['code']) != "undetermined")[0]
+                            seq = coded[np.argsort(np.array(read.body['time'])[coded])]
+                            part1 = set(seq[:read.kneepoint * read.step]) & set(
+                                np.where(np.array(read.body['code']) == "no")[0])
+                            part2 = set(seq[read.kneepoint * read.step:]) & set(
+                                np.where(np.array(read.body['code']) == "yes")[0])
+                            for id in part1|part2:
+                                read.code_error(id, error=error)
+                        break
             else:
                 if pos >= target:
                     break
@@ -1171,7 +1196,7 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
     #     a,b,c,d =read.train(weighting=True,pne=True)
     #     for id in c:
     #         read.code_error(id, error=error)
-    read.export()
+    # read.export()
     results = analyze(read)
     print(results)
     return read
@@ -1581,7 +1606,7 @@ def error_hpcc(seed = 1):
     np.random.seed(int(seed))
     files = ["Hall.csv", "Wahono.csv", "Danijel.csv", "K_all3.csv"]
     queries = {"Hall.csv": 'defect_prediction', "Wahono.csv": 'defect_prediction', "Danijel.csv": 'defect_prediction_metrics', "K_all3.csv": "systematic review"}
-    correct = ['none', 'three', 'machine', 'machine2', 'machine3', 'machine4']
+    correct = ['none', 'three', 'machine', 'knee']
 
     results={}
     for file in files:
@@ -1592,8 +1617,8 @@ def error_hpcc(seed = 1):
                 result = BM25(file,queries[file],'est','three')
             elif cor == 'machine':
                 result = BM25(file,queries[file],'est','random', 5)
-            # elif cor == 'machine2':
-            #     result = BM25(file,queries[file],'est','random2', 5)
+            elif cor == 'knee':
+                result = BM25(file,queries[file],'knee','random')
             # elif cor == 'machine3':
             #     result = BM25(file,queries[file],'est','random3', 5)
             else:
