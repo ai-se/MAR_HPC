@@ -881,10 +881,10 @@ class MAR(object):
 
     ## Get suspecious codes
     def susp(self,clf):
-        thres_pos = 1
-        thres_neg = 0.5
-        length_pos = 10
-        length_neg = 10
+        thres_pos = 0.5
+        thres_neg = 0.1
+        length_pos = 1
+        length_neg = 50
 
         poses = np.where(np.array(self.body['code']) == "yes")[0]
         negs = np.where(np.array(self.body['code']) == "no")[0]

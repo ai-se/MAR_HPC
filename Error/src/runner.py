@@ -1126,6 +1126,7 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
     stopat = 0.95
     thres = 0
     starting = 1
+    interval = int(interval)
 
     read = MAR()
     read = read.create(filename)
@@ -1165,11 +1166,11 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
             else:
                 for id in c:
                     read.code_error(id, error=error)
-    if read.interval < 100:
-        read.round = read.interval
-        a,b,c,d =read.train(weighting=True,pne=True)
-        for id in c:
-            read.code_error(id, error=error)
+    # if read.interval < 100:
+    #     read.round = read.interval
+    #     a,b,c,d =read.train(weighting=True,pne=True)
+    #     for id in c:
+    #         read.code_error(id, error=error)
     read.export()
     results = analyze(read)
     print(results)
