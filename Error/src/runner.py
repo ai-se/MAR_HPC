@@ -1121,6 +1121,56 @@ def Code_noError(filename, code, stop='true'):
     return read
 
 
+###
+def draw_errors(seed=1):
+    # np.random.seed(seed)
+    # correct = BM25('Hall.csv', 'defect_prediction', 'est', 'random', 5).record
+    # none = BM25('Hall.csv', 'defect_prediction', 'est', 'random').record
+    # with open("../dump/error_30.pickle","a") as handle:
+    #     pickle.dump(correct,handle)
+    #     pickle.dump(none, handle)
+    with open("../dump/error_30.pickle","r") as handle:
+        correct = pickle.load(handle)
+        none = pickle.load(handle)
+
+    font = {'family': 'normal',
+            'weight': 'bold',
+            'size': 20}
+
+    plt.rc('font', **font)
+    paras = {'lines.linewidth': 4, 'legend.fontsize': 20, 'axes.labelsize': 30, 'legend.frameon': False,
+             'figure.autolayout': True, 'figure.figsize': (16, 6)}
+    plt.rcParams.update(paras)
+    lines = ['-', '--', '-.', ':']
+    five = ['$0th$', '$25th$', 'median result', '$75th$', 'worst result']
+    colors = ["blue", 'red', 'green', 'brown', 'yellow']
+
+    threelines = ['true_pos', 'false_neg', 'false_pos']
+    names = {'true_pos':'true positives', 'false_neg':'false negatives', 'false_pos':'false positives'}
+
+    plt.figure(0)
+    for j, ind in enumerate(threelines):
+        plt.plot(correct['count'], np.array(correct[ind]) , linestyle=lines[1], color=colors[j],label="Disagree (" + str(names[ind]) + ")")
+    for j, ind in enumerate(threelines):
+        plt.plot(none['count'], np.array(none[ind]) , linestyle=lines[0], color=colors[j],
+                 label="None (" + str(names[ind]) + ")")
+    # plt.ylabel("Recall")
+    plt.xlabel("#Studies Reviewed")
+
+    docnum = 8991
+    x = [i * 100 for i in xrange(10)]
+
+    xlabels = [str(z) + "\n(" + '%.1f' % (z / docnum * 100) + "%)" for z in x]
+    plt.xticks(x, xlabels)
+    plt.ylim((0, 100))
+    plt.xlim((0, 900))
+
+    plt.legend(bbox_to_anchor=(1, 0.65), loc=1, ncol=2, borderaxespad=0.)
+    plt.savefig("../figure/error_all.eps")
+    plt.savefig("../figure/error_all.png")
+
+
+
 ### BM25
 def BM25(filename, query, stop='true', error='none', interval = 100000):
     stopat = 0.95
@@ -1143,11 +1193,12 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
         read.enable_est = False
 
     while True:
-        pos, neg, total = read.get_numbers()
-        try:
-            print("%d, %d, %d" %(pos,pos+neg, read.est_num))
-        except:
-            print("%d, %d" % (pos, pos + neg))
+        pos, neg, total = read.get_error()
+        # pos, neg, total = read.get_numbers()
+        # try:
+        #     print("%d, %d, %d" %(pos,pos+neg, read.est_num))
+        # except:
+        #     print("%d, %d" % (pos, pos + neg))
 
         if pos + neg >= total:
             if stop=='knee' and error=='random':
@@ -1198,7 +1249,7 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
     #         read.code_error(id, error=error)
     # read.export()
     results = analyze(read)
-    print(results)
+    # print(results)
     return read
 
 def analyze(read):
@@ -1469,7 +1520,7 @@ def draw_three():
              'figure.autolayout': True, 'figure.figsize': (16, 6)}
     plt.rcParams.update(paras)
     lines=['-','--','-.',':']
-    five=['$0th$','$25th$','median result','$75th$','worst result']
+    five=['$0th$','$25th$','median','$75th$','worst']
     colors=["blue",'brown', 'green', 'yellow', 'red']
 
     with open("../dump/nodata_est1.pickle","r") as handle:
@@ -1497,10 +1548,10 @@ def draw_three():
     plt.figure(0)
     for j,ind in enumerate(stats):
         if ind == 50 or ind==100:
-            plt.plot(stats[ind]['x'], np.array(stats[ind]['pos'])/106,linestyle=lines[1], color=colors[j], label="FAST2 ("+str(five[j])+")")
+            plt.plot(stats[ind]['x'], np.array(stats[ind]['pos'])/106,linestyle=lines[1], color=colors[j], label="Auto-BM25 + SEMI ("+str(five[j])+")")
     for j,ind in enumerate(stats1):
         if ind == 50 or ind==100:
-            plt.plot(stats1[ind]['x'], np.array(stats1[ind]['pos'])/106,linestyle=lines[0], color=colors[j], label="FAST1 ("+str(five[j])+")")
+            plt.plot(stats1[ind]['x'], np.array(stats1[ind]['pos'])/106,linestyle=lines[0], color=colors[j], label="Yu'16 ("+str(five[j])+")")
     plt.ylabel("Recall")
     plt.xlabel("#Studies Reviewed")
 
@@ -1510,7 +1561,8 @@ def draw_three():
     xlabels = [str(z)+"\n("+'%.1f'%(z/docnum*100)+"%)" for z in x]
 
     plt.xticks(x, xlabels)
-
+    plt.ylim((0, 1))
+    plt.xlim((0, 900))
     plt.legend(bbox_to_anchor=(1, 0.50), loc=1, ncol=1, borderaxespad=0.)
     plt.savefig("../figure/percentile_all.eps")
     plt.savefig("../figure/percentile_all.png")

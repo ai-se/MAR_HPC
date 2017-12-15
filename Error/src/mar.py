@@ -28,7 +28,7 @@ class MAR(object):
         self.name=self.filename.split(".")[0]
         self.flag=True
         self.hasLabel=True
-        self.record={"x":[],"pos":[],"true_pos":[],"false_pos":[],"false_neg":[]}
+        self.record={"x":[],"count":[],"pos":[],"true_pos":[],"false_pos":[],"false_neg":[]}
         self.body={}
         self.est=[]
         self.last_pos=0
@@ -237,11 +237,17 @@ class MAR(object):
         false_neg = len(set(negs).intersection(set(actual_pos)))
         false_pos = len(poses)-true_pos
 
-        self.record['x'].append(int(len(poses)+len(negs)))
+        self.record['x'].append(int(len(poses) + len(negs)))
+        self.record['count'].append(sum(self.body["count"]))
         self.record['pos'].append(int(len(poses)))
         self.record['false_neg'].append(int(false_neg))
         self.record['true_pos'].append(int(true_pos))
         self.record['false_pos'].append(int(false_pos))
+
+        total = len(self.body["code"]) - self.last_pos - self.last_neg
+        self.pool = np.where(np.array(self.body['code']) == "undetermined")[0]
+        self.labeled = list(set(range(len(self.body['code']))) - set(self.pool))
+        return len(poses), len(negs), total
 
     def export(self):
         fields = ["Document Title", "Abstract", "Year", "PDF Link", "label", "code","time"]
@@ -904,7 +910,7 @@ class MAR(object):
     ## Get suspecious codes
     def susp(self,clf):
         thres_pos = 0.5
-        thres_neg = 0.1
+        thres_neg = 0.2
         length_pos = 1
         length_neg = 50
 
@@ -922,7 +928,7 @@ class MAR(object):
             se_pos = np.argsort(prob_pos)[:length_pos]
             se_pos = [s for s in se_pos if prob_pos[s]<thres_pos]
             sel_pos = poses[se_pos]
-            print(np.array(self.body['label'])[sel_pos])
+            # print(np.array(self.body['label'])[sel_pos])
         else:
             sel_pos = np.array([])
             print('null')
@@ -933,7 +939,7 @@ class MAR(object):
             se_neg = np.argsort(prob_neg)[:length_neg]
             se_neg = [s for s in se_neg if prob_neg[s]<thres_neg]
             sel_neg = negs[se_neg]
-            print(np.array(self.body['label'])[sel_neg])
+            # print(np.array(self.body['label'])[sel_neg])
         else:
             sel_neg = np.array([])
             print('null')
