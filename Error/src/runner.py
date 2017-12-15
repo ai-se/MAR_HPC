@@ -1144,10 +1144,10 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
 
     while True:
         pos, neg, total = read.get_numbers()
-        # try:
-        #     print("%d, %d, %d" %(pos,pos+neg, read.est_num))
-        # except:
-        #     print("%d, %d" % (pos, pos + neg))
+        try:
+            print("%d, %d, %d" %(pos,pos+neg, read.est_num))
+        except:
+            print("%d, %d" % (pos, pos + neg))
 
         if pos + neg >= total:
             if stop=='knee' and error=='random':
@@ -1605,7 +1605,7 @@ def error_machine():
 def error_hpcc(seed = 1):
     np.random.seed(int(seed))
     files = ["Hall.csv", "Wahono.csv", "Danijel.csv", "K_all3.csv"]
-    queries = {"Hall.csv": 'defect_prediction', "Wahono.csv": 'defect_prediction', "Danijel.csv": 'defect_prediction_metrics', "K_all3.csv": "systematic review"}
+    queries = {"Hall.csv": 'defect_prediction', "Wahono.csv": 'defect_prediction', "Danijel.csv": 'defect_prediction_metrics', "K_all3.csv": "systematic_review"}
     correct = ['none', 'three', 'machine', 'knee']
 
     results={}
@@ -1630,7 +1630,7 @@ def error_hpcc(seed = 1):
 
 def error_summary():
     files = ["Hall.csv", "Wahono.csv", "Danijel.csv", "K_all3.csv"]
-    correct = ['none', 'three', 'machine', 'knee']
+    correct = ['none', 'three', 'machine']
     total = {"Hall.csv": 106, "Wahono.csv": 62, "Danijel.csv": 48, "K_all3.csv": 44}
     results = []
     with open("../dump/error_new_hpcc30.pickle","r") as handle:
