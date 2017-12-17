@@ -20,7 +20,7 @@ class MAR(object):
         self.syn_thres = 0.8
         self.enable_est = True
         self.interval = 50000000
-        self.er = 0.30
+        self.er = 0.00
 
 
     def create(self,filename):

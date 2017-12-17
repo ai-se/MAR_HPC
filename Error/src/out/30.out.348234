@@ -1,0 +1,38 @@
+30: Hall.csv: none: 30: Hall.csv: three: 30: Hall.csv: machine: 30: Hall.csv: knee: 30: Wahono.csv: none: 30: Wahono.csv: three: 30: Wahono.csv: machine: 30: Wahono.csv: knee: 30: Danijel.csv: none: 30: Danijel.csv: three: 30: Danijel.csv: machine: 30: Danijel.csv: knee: 30: K_all3.csv: none: 30: K_all3.csv: three: 30: K_all3.csv: machine: 30: K_all3.csv: knee: 
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c1-7>
+Subject: Job 348234: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 30> Done
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 30> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2>.
+Job was executed on host(s) <2*n2c1-7>, in queue <single_chassis>, as user <zyu9> in cluster <henry2>.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Sat Dec 16 21:03:03 2017
+Results reported at Sat Dec 16 21:39:20 2017
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 30
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   3052.69 sec.
+    Max Memory :       170 MB
+    Max Swap   :      1188 MB
+
+    Max Processes  :         3
+    Max Threads    :         8
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/30.err.348234> for stderr output of this job.
+

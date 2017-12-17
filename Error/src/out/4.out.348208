@@ -1,0 +1,38 @@
+4: Hall.csv: none: 4: Hall.csv: three: 4: Hall.csv: machine: 4: Hall.csv: knee: 4: Wahono.csv: none: 4: Wahono.csv: three: 4: Wahono.csv: machine: 4: Wahono.csv: knee: 4: Danijel.csv: none: 4: Danijel.csv: three: 4: Danijel.csv: machine: 4: Danijel.csv: knee: 4: K_all3.csv: none: 4: K_all3.csv: three: 4: K_all3.csv: machine: 4: K_all3.csv: knee: 
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2b3-8>
+Subject: Job 348208: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 4> Done
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 4> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2>.
+Job was executed on host(s) <2*n2b3-8>, in queue <single_chassis>, as user <zyu9> in cluster <henry2>.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Sat Dec 16 21:03:03 2017
+Results reported at Sat Dec 16 21:44:13 2017
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 4
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   3419.38 sec.
+    Max Memory :       170 MB
+    Max Swap   :      1188 MB
+
+    Max Processes  :         3
+    Max Threads    :         8
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/4.err.348208> for stderr output of this job.
+
