@@ -1160,8 +1160,16 @@ def draw_errors(seed=1):
     docnum = 8991
     x = [i * 100 for i in xrange(10)]
 
+
+
     xlabels = [str(z) + "\n(" + '%.1f' % (z / docnum * 100) + "%)" for z in x]
     plt.xticks(x, xlabels)
+
+    # alldoc = 106
+    # y = [i * 20 for i in xrange(6)]
+    # ylabels = [str(z) + "\n(" + '%.2f' % (z / alldoc) + ")" for z in y]
+    # plt.yticks(y, ylabels)
+
     plt.ylim((0, 100))
     plt.xlim((0, 900))
 
@@ -1677,12 +1685,12 @@ def error_hpcc(seed = 1):
                 result = BM25(file,queries[file],'est','random')
 
             results[file][cor] = analyze(result)
-    with open("../dump/error_new_hpcc00.pickle","a") as handle:
+    with open("../dump/error_new_hpcc30.pickle","a") as handle:
         pickle.dump(results,handle)
 
 def error_summary():
     files = ["Hall.csv", "Wahono.csv", "Danijel.csv", "K_all3.csv"]
-    correct = ['none', 'three', 'machine']
+    correct = ['none', 'three', 'machine', 'knee']
     total = {"Hall.csv": 106, "Wahono.csv": 62, "Danijel.csv": 48, "K_all3.csv": 44}
     results = []
     with open("../dump/error_new_hpcc30.pickle","r") as handle:
@@ -1718,7 +1726,7 @@ def error_summary():
     print("\\hline")
     for dataset in files:
         # out = dataset.split('.')[0]+" & " + ' & '.join([str(int(np.median(trans[dataset][cor]['truepos'])))+" / "+ str(int(np.median(trans[dataset][cor]['count']))) +" / "+ str(int(np.median(trans[dataset][cor]['falseneg']))) +" / "+ str(int(np.median(trans[dataset][cor]['falsepos']))) for cor in correct]) + '\\\\'
-        out = dataset.split('.')[0]+" & " + ' & '.join([str(round(np.median(np.array(trans[dataset][cor]['truepos'])/(np.array(trans[dataset][cor]['truepos'])+np.array(trans[dataset][cor]['falsepos']))),2))+" / "+str(round(np.median(np.array(trans[dataset][cor]['truepos'])/total[dataset]),2))+" / "+str(int(np.median(trans[dataset][cor]['count']))) for cor in correct]) + '\\\\'
+        out = dataset.split('.')[0]+" & " + ' & '.join([str(round(np.median(np.array(trans[dataset][cor]['truepos'])/total[dataset]),2))+" / "+str(round(np.median(np.array(trans[dataset][cor]['truepos'])/(np.array(trans[dataset][cor]['truepos'])+np.array(trans[dataset][cor]['falsepos']))),2))+" / "+str(int(np.median(trans[dataset][cor]['count']))) for cor in correct]) + '\\\\'
         print(out)
         print("\\hline")
     print("\\end{tabular}")
