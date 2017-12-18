@@ -1,0 +1,38 @@
+11: Hall.csv: none: 11: Hall.csv: three: 11: Hall.csv: machine: 11: Hall.csv: knee: 11: Wahono.csv: none: 11: Wahono.csv: three: 11: Wahono.csv: machine: 11: Wahono.csv: knee: 11: Danijel.csv: none: 11: Danijel.csv: three: 11: Danijel.csv: machine: 11: Danijel.csv: knee: 11: K_all3.csv: none: 11: K_all3.csv: three: 11: K_all3.csv: machine: 11: K_all3.csv: knee: 
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2b3-9>
+Subject: Job 348433: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 11> Done
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 11> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2>.
+Job was executed on host(s) <2*n2b3-9>, in queue <single_chassis>, as user <zyu9> in cluster <henry2>.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Sun Dec 17 09:04:24 2017
+Results reported at Sun Dec 17 10:02:30 2017
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 11
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   4684.31 sec.
+    Max Memory :       170 MB
+    Max Swap   :      1188 MB
+
+    Max Processes  :         3
+    Max Threads    :         8
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/11.err.348433> for stderr output of this job.
+
