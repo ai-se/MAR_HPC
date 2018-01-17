@@ -1155,7 +1155,7 @@ def draw_errors(seed=1):
         plt.plot(none['count'], np.array(none[ind]) , linestyle=lines[0], color=colors[j],
                  label="None (" + str(names[ind]) + ")")
     # plt.ylabel("Recall")
-    plt.xlabel("#Studies Reviewed")
+    plt.xlabel("#Papers Reviewed")
 
     docnum = 8991
     x = [i * 100 for i in xrange(10)]
@@ -1696,7 +1696,7 @@ def error_summary():
     with open("../dump/error_new_hpcc30.pickle","r") as handle:
         # result = pickle.load(handle)
         # result2 = pickle.load(handle)
-        for i in xrange(30):
+        for i in xrange(27):
             results.append(pickle.load(handle))
         # results=[]
         # for i in xrange(30):
