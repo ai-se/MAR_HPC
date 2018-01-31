@@ -1691,12 +1691,12 @@ def error_hpcc(seed = 1):
 def error_summary():
     files = ["Hall.csv", "Wahono.csv", "Danijel.csv", "K_all3.csv"]
     correct = ['none', 'three', 'machine', 'knee']
-    total = {"Hall.csv": 106, "Wahono.csv": 62, "Danijel.csv": 48, "K_all3.csv": 44}
+    total = {"Hall.csv": 104, "Wahono.csv": 62, "Danijel.csv": 48, "K_all3.csv": 44}
     results = []
     with open("../dump/error_new_hpcc30.pickle","r") as handle:
         # result = pickle.load(handle)
         # result2 = pickle.load(handle)
-        for i in xrange(27):
+        for i in xrange(30):
             results.append(pickle.load(handle))
         # results=[]
         # for i in xrange(30):
