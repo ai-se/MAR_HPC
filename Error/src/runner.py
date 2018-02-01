@@ -1691,7 +1691,7 @@ def error_hpcc(seed = 1):
 def error_summary():
     files = ["Hall.csv", "Wahono.csv", "Danijel.csv", "K_all3.csv"]
     correct = ['none', 'three', 'machine', 'knee']
-    total = {"Hall.csv": 104, "Wahono.csv": 62, "Danijel.csv": 48, "K_all3.csv": 44}
+    total = {"Hall.csv": 104, "Wahono.csv": 62, "Danijel.csv": 48, "K_all3.csv": 45}
     results = []
     with open("../dump/error_new_hpcc30.pickle","r") as handle:
         # result = pickle.load(handle)

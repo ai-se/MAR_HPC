@@ -14,7 +14,7 @@ class MAR(object):
     def __init__(self):
         self.fea_num = 4000
         self.step = 10
-        self.enough = 20
+        self.enough = 30
         self.kept=50
         self.atleast=100
         self.syn_thres = 0.8
@@ -563,16 +563,16 @@ class MAR(object):
             sample = list(decayed) + list(np.array(unlabeled)[unlabel_sel])
             clf.fit(self.csr_mat[sample], labels[sample])
 
-        ## correct errors with human-machine disagreements ##
-        if self.interval<100:
-            if self.round==self.interval:
-                self.round=0
-                susp, conf = self.susp(clf)
-                if len(susp) > 0:
-                    return susp, conf, susp, conf
-            else:
-                self.round = self.round + 1
-        #####################################################
+        # ## correct errors with human-machine disagreements ##
+        # if self.interval<100:
+        #     if self.round==self.interval:
+        #         self.round=0
+        #         susp, conf = self.susp(clf)
+        #         if len(susp) > 0:
+        #             return susp, conf, susp, conf
+        #     else:
+        #         self.round = self.round + 1
+        # #####################################################
 
 
         uncertain_id, uncertain_prob = self.uncertain(clf)
@@ -582,6 +582,16 @@ class MAR(object):
                 self.est_num, self.est = self.estimate_curve(clf, reuse=True, num_neg=len(sample)-len(left))
             else:
                 self.est_num, self.est = self.estimate_curve(clf, reuse=False, num_neg=len(sample)-len(left))
+            ## correct errors with human-machine disagreements ##
+            if self.interval<100:
+                if self.round==self.interval:
+                    self.round=0
+                    susp, conf = self.susp_est()
+                    if len(susp) > 0:
+                        return susp, conf, susp, conf
+                else:
+                    self.round = self.round + 1
+        #####################################################
             return uncertain_id, self.est[uncertain_id], certain_id, self.est[certain_id]
         else:
             return uncertain_id, uncertain_prob, certain_id, certain_prob
@@ -798,13 +808,24 @@ class MAR(object):
                 new = 'yes'
             else:
                 new = 'no'
+
         if new == self.body["code"][id] or self.body["count"][id] == 2:
             self.body['fixed'][id]=1
+
+
         if self.body["code"][id]!='undetermined' and self.body["code"][id]!=self.body["label"][id] and new == self.body["label"][id]:
             self.correction = self.correction+1
+
+
+        # pre = self.body["code"][id]
         self.body["code"][id] = new
         self.body["time"][id] = time.time()
         self.body["count"][id] = self.body["count"][id] + 1
+
+
+        # if self.body['fixed'][id]==0 and pre!=new:
+        #     self.code_random(id,label)
+
 
     def code_random1(self,id,label):
         import random
@@ -909,8 +930,8 @@ class MAR(object):
 
     ## Get suspecious codes
     def susp(self,clf):
-        thres_pos = 0.5
-        thres_neg = 0.2
+        thres_pos = .8
+        thres_neg = .2
         length_pos = 1
         length_neg = 50
 
@@ -922,13 +943,16 @@ class MAR(object):
         poses = np.array(poses)[np.where(np.array(self.body['fixed'])[poses] == 0)[0]]
         negs = np.array(negs)[np.where(np.array(self.body['fixed'])[negs] == 0)[0]]
 
+        # length_pos = int(0.02*len(poses))
+        # length_neg = int(0.2*len(negs))
+
         if len(poses)>0:
             pos_at = list(clf.classes_).index("yes")
             prob_pos = clf.predict_proba(self.csr_mat[poses])[:,pos_at]
             se_pos = np.argsort(prob_pos)[:length_pos]
             se_pos = [s for s in se_pos if prob_pos[s]<thres_pos]
             sel_pos = poses[se_pos]
-            # print(np.array(self.body['label'])[sel_pos])
+            print(np.array(self.body['label'])[sel_pos])
         else:
             sel_pos = np.array([])
             print('null')
@@ -939,12 +963,60 @@ class MAR(object):
             se_neg = np.argsort(prob_neg)[:length_neg]
             se_neg = [s for s in se_neg if prob_neg[s]<thres_neg]
             sel_neg = negs[se_neg]
-            # print(np.array(self.body['label'])[sel_neg])
+            print(np.array(self.body['label'])[sel_neg])
         else:
             sel_neg = np.array([])
             print('null')
         try:
             probs = prob_pos[se_pos].tolist() + prob_neg[se_neg].tolist()
+        except:
+            probs = []
+        return sel_pos.tolist() + sel_neg.tolist(), probs
+
+    ## Get suspecious codes
+    def susp_est(self):
+        thres_pos = 0.5
+        thres_neg = 0.1
+        length_pos = 1
+        length_neg = 50
+
+        poses = np.where(np.array(self.body['code']) == "yes")[0]
+        negs = np.where(np.array(self.body['code']) == "no")[0]
+
+        # if len(poses)<self.enough:
+        #     thres_pos = .9
+        #     thres_neg = 0.02
+
+        poses = np.array(poses)[np.argsort(np.array(self.body['time'])[poses])[self.last_pos:]]
+        negs = np.array(negs)[np.argsort(np.array(self.body['time'])[negs])[self.last_neg:]]
+
+        poses = np.array(poses)[np.where(np.array(self.body['fixed'])[poses] == 0)[0]]
+        negs = np.array(negs)[np.where(np.array(self.body['fixed'])[negs] == 0)[0]]
+
+        # length_pos = int(0.02*len(poses))
+        # length_neg = int(0.2*len(negs))
+
+        if len(poses)>0:
+            prob_pos = self.est[poses]
+            se_pos = np.argsort(prob_pos)[:length_pos]
+            se_pos = [s for s in se_pos if prob_pos[s]<thres_pos]
+            sel_pos = poses[se_pos]
+            print(np.array(self.body['label'])[sel_pos])
+        else:
+            sel_pos = np.array([])
+            print('null')
+
+        if len(negs)>0:
+            prob_neg = self.est[negs]
+            se_neg = np.argsort(prob_neg)[::-1][:length_neg]
+            se_neg = [s for s in se_neg if prob_neg[s]>thres_neg]
+            sel_neg = negs[se_neg]
+            print(np.array(self.body['label'])[sel_neg])
+        else:
+            sel_neg = np.array([])
+            print('null')
+        try:
+            probs = prob_pos[se_pos].tolist() + (1-prob_neg[se_neg]).tolist()
         except:
             probs = []
         return sel_pos.tolist() + sel_neg.tolist(), probs
