@@ -907,6 +907,11 @@ class MAR(object):
             self.code_random2(id,label)
 
     def knee(self):
+        # self.record['pos']: # positive examples (accumulate) each round
+        # self.record['x']: # cost (accumulate) each round
+        # e.g.: self.record['pos'] = [0,3,5,7,...]
+        #       self.record['x'] = [0,10,20,30,...]
+
         y = self.record['pos'][-1]
         s = self.record['x'][-1]
         ratio = s / np.sqrt(y ** 2 + s ** 2)
@@ -952,7 +957,7 @@ class MAR(object):
             se_pos = np.argsort(prob_pos)[:length_pos]
             se_pos = [s for s in se_pos if prob_pos[s]<thres_pos]
             sel_pos = poses[se_pos]
-            print(np.array(self.body['label'])[sel_pos])
+            # print(np.array(self.body['label'])[sel_pos])
         else:
             sel_pos = np.array([])
             print('null')
@@ -963,7 +968,7 @@ class MAR(object):
             se_neg = np.argsort(prob_neg)[:length_neg]
             se_neg = [s for s in se_neg if prob_neg[s]<thres_neg]
             sel_neg = negs[se_neg]
-            print(np.array(self.body['label'])[sel_neg])
+            # print(np.array(self.body['label'])[sel_neg])
         else:
             sel_neg = np.array([])
             print('null')
@@ -976,16 +981,16 @@ class MAR(object):
     ## Get suspecious codes
     def susp_est(self):
         thres_pos = 0.5
-        thres_neg = 0.1
+        thres_neg = 0.02
         length_pos = 1
         length_neg = 50
 
         poses = np.where(np.array(self.body['code']) == "yes")[0]
         negs = np.where(np.array(self.body['code']) == "no")[0]
 
-        # if len(poses)<self.enough:
-        #     thres_pos = .9
-        #     thres_neg = 0.02
+        # if len(poses)>=self.enough:
+        #     thres_pos = .5
+        #     thres_neg = 0.1
 
         poses = np.array(poses)[np.argsort(np.array(self.body['time'])[poses])[self.last_pos:]]
         negs = np.array(negs)[np.argsort(np.array(self.body['time'])[negs])[self.last_neg:]]
@@ -1001,7 +1006,7 @@ class MAR(object):
             se_pos = np.argsort(prob_pos)[:length_pos]
             se_pos = [s for s in se_pos if prob_pos[s]<thres_pos]
             sel_pos = poses[se_pos]
-            print(np.array(self.body['label'])[sel_pos])
+            # print(np.array(self.body['label'])[sel_pos])
         else:
             sel_pos = np.array([])
             print('null')
@@ -1011,10 +1016,12 @@ class MAR(object):
             se_neg = np.argsort(prob_neg)[::-1][:length_neg]
             se_neg = [s for s in se_neg if prob_neg[s]>thres_neg]
             sel_neg = negs[se_neg]
-            print(np.array(self.body['label'])[sel_neg])
+            # print(np.array(self.body['label'])[sel_neg])
         else:
             sel_neg = np.array([])
             print('null')
+
+
         try:
             probs = prob_pos[se_pos].tolist() + (1-prob_neg[se_neg]).tolist()
         except:

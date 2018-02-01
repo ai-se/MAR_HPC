@@ -1186,6 +1186,7 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
     starting = 1
     interval = int(interval)
 
+
     read = MAR()
     read = read.create(filename)
 
@@ -1203,10 +1204,10 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
     while True:
         pos, neg, total = read.get_error()
         # pos, neg, total = read.get_numbers()
-        try:
-            print("%d, %d, %d" %(pos,pos+neg, read.est_num))
-        except:
-            print("%d, %d" % (pos, pos + neg))
+        # try:
+        #     print("%d, %d, %d" %(pos,pos+neg, read.est_num))
+        # except:
+        #     print("%d, %d" % (pos, pos + neg))
 
         if pos + neg >= total:
             if stop=='knee' and error=='random':
@@ -1689,6 +1690,7 @@ def error_hpcc(seed = 1):
         pickle.dump(results,handle)
 
 def error_summary():
+    # import cPickle as pickle
     files = ["Hall.csv", "Wahono.csv", "Danijel.csv", "K_all3.csv"]
     correct = ['none', 'three', 'machine', 'knee']
     total = {"Hall.csv": 104, "Wahono.csv": 62, "Danijel.csv": 48, "K_all3.csv": 45}
@@ -1696,7 +1698,7 @@ def error_summary():
     with open("../dump/error_new_hpcc30.pickle","r") as handle:
         # result = pickle.load(handle)
         # result2 = pickle.load(handle)
-        for i in xrange(29):
+        for i in xrange(28):
             results.append(pickle.load(handle))
         # results=[]
         # for i in xrange(30):
