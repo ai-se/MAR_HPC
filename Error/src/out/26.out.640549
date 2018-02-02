@@ -1,0 +1,65 @@
+26: Hall.csv: none: {'count': 840, 'truepos': 80, 'falseneg': 22, 'correction': 0, 'unknownyes': 2, 'falsepos': 0, 'unique': 840}
+26: Hall.csv: three: {'count': 1192, 'truepos': 81, 'falseneg': 21, 'correction': 43, 'unknownyes': 2, 'falsepos': 0, 'unique': 570}
+26: Hall.csv: machine: {'count': 995, 'truepos': 91, 'falseneg': 11, 'correction': 26, 'unknownyes': 2, 'falsepos': 0, 'unique': 620}
+26: Hall.csv: knee: {'count': 531, 'truepos': 88, 'falseneg': 11, 'correction': 22, 'unknownyes': 5, 'falsepos': 1, 'unique': 380}
+26: Wahono.csv: none: {'count': 1520, 'truepos': 46, 'falseneg': 14, 'correction': 0, 'unknownyes': 2, 'falsepos': 5, 'unique': 1520}
+26: Wahono.csv: three: {'count': 2939, 'truepos': 49, 'falseneg': 10, 'correction': 35, 'unknownyes': 3, 'falsepos': 0, 'unique': 1450}
+26: Wahono.csv: machine: {'count': 2006, 'truepos': 53, 'falseneg': 7, 'correction': 14, 'unknownyes': 2, 'falsepos': 1, 'unique': 1360}
+26: Wahono.csv: knee: {'count': 1420, 'truepos': 53, 'falseneg': 5, 'correction': 12, 'unknownyes': 4, 'falsepos': 5, 'unique': 920}
+26: Danijel.csv: none: {'count': 1450, 'truepos': 28, 'falseneg': 18, 'correction': 0, 'unknownyes': 2, 'falsepos': 3, 'unique': 1450}
+26: Danijel.csv: three: {'count': 3125, 'truepos': 34, 'falseneg': 13, 'correction': 24, 'unknownyes': 1, 'falsepos': 0, 'unique': 1550}
+26: Danijel.csv: machine: {'count': 1248, 'truepos': 41, 'falseneg': 5, 'correction': 11, 'unknownyes': 2, 'falsepos': 2, 'unique': 810}
+26: Danijel.csv: knee: {'count': 514, 'truepos': 31, 'falseneg': 7, 'correction': 9, 'unknownyes': 10, 'falsepos': 1, 'unique': 370}
+26: K_all3.csv: none: {'count': 740, 'truepos': 29, 'falseneg': 14, 'correction': 0, 'unknownyes': 2, 'falsepos': 1, 'unique': 740}
+26: K_all3.csv: three: {'count': 1332, 'truepos': 32, 'falseneg': 10, 'correction': 29, 'unknownyes': 3, 'falsepos': 0, 'unique': 650}
+26: K_all3.csv: machine: {'count': 791, 'truepos': 35, 'falseneg': 4, 'correction': 11, 'unknownyes': 6, 'falsepos': 4, 'unique': 460}
+26: K_all3.csv: knee: {'count': 983, 'truepos': 28, 'falseneg': 15, 'correction': 7, 'unknownyes': 2, 'falsepos': 8, 'unique': 740}
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2d1-10>
+Subject: Job 640549: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 26> in cluster <henry2> Done
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 26> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2> at Thu Feb  1 16:35:46 2018.
+Job was executed on host(s) <1*n2d1-10>, in queue <single_chassis>, as user <zyu9> in cluster <henry2> at Thu Feb  1 16:35:51 2018.
+                            <1*n2d1-11>
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Thu Feb  1 16:35:51 2018.
+Terminated at Thu Feb  1 17:52:59 2018.
+Results reported at Thu Feb  1 17:52:59 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 26
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   5493.49 sec.
+    Max Memory :                                 284.30 MB
+    Average Memory :                             233.32 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   1331 MB
+    Max Processes :                              3
+    Max Threads :                                8
+    Run time :                                   4643 sec.
+    Turnaround time :                            4633 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS: The stderr output (if any) follows:
+
+
+
+PS:
+
+Fail to open stderr file ./err/26.err.640549: No such file or directory.
+The stderr output is included in this report.
+
