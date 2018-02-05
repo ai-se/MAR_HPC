@@ -14,7 +14,7 @@ class MAR(object):
     def __init__(self):
         self.fea_num = 4000
         self.step = 10
-        self.enough = 30
+        self.enough = 20
         self.kept=50
         self.atleast=100
         self.syn_thres = 0.8
@@ -563,16 +563,16 @@ class MAR(object):
             sample = list(decayed) + list(np.array(unlabeled)[unlabel_sel])
             clf.fit(self.csr_mat[sample], labels[sample])
 
-        # ## correct errors with human-machine disagreements ##
-        # if self.interval<100:
-        #     if self.round==self.interval:
-        #         self.round=0
-        #         susp, conf = self.susp(clf)
-        #         if len(susp) > 0:
-        #             return susp, conf, susp, conf
-        #     else:
-        #         self.round = self.round + 1
-        # #####################################################
+        ## correct errors with human-machine disagreements ##
+        if self.interval<100:
+            if self.round==self.interval:
+                self.round=0
+                susp, conf = self.susp(clf)
+                if len(susp) > 0:
+                    return susp, conf, susp, conf
+            else:
+                self.round = self.round + 1
+        #####################################################
 
 
         uncertain_id, uncertain_prob = self.uncertain(clf)
@@ -583,14 +583,14 @@ class MAR(object):
             else:
                 self.est_num, self.est = self.estimate_curve(clf, reuse=False, num_neg=len(sample)-len(left))
             ## correct errors with human-machine disagreements ##
-            if self.interval<100:
-                if self.round==self.interval:
-                    self.round=0
-                    susp, conf = self.susp_est()
-                    if len(susp) > 0:
-                        return susp, conf, susp, conf
-                else:
-                    self.round = self.round + 1
+            # if self.interval<100:
+            #     if self.round==self.interval:
+            #         self.round=0
+            #         susp, conf = self.susp_est()
+            #         if len(susp) > 0:
+            #             return susp, conf, susp, conf
+            #     else:
+            #         self.round = self.round + 1
         #####################################################
             return uncertain_id, self.est[uncertain_id], certain_id, self.est[certain_id]
         else:
@@ -817,14 +817,14 @@ class MAR(object):
             self.correction = self.correction+1
 
 
-        # pre = self.body["code"][id]
+        pre = self.body["code"][id]
         self.body["code"][id] = new
         self.body["time"][id] = time.time()
         self.body["count"][id] = self.body["count"][id] + 1
 
 
-        # if self.body['fixed'][id]==0 and pre!=new:
-        #     self.code_random(id,label)
+        if self.body['fixed'][id]==0 and pre=='yes' and pre!=new:
+            self.code_random(id,label)
 
 
     def code_random1(self,id,label):
@@ -935,8 +935,8 @@ class MAR(object):
 
     ## Get suspecious codes
     def susp(self,clf):
-        thres_pos = .8
-        thres_neg = .2
+        thres_pos = .5
+        thres_neg = .1
         length_pos = 1
         length_neg = 50
 
@@ -957,7 +957,7 @@ class MAR(object):
             se_pos = np.argsort(prob_pos)[:length_pos]
             se_pos = [s for s in se_pos if prob_pos[s]<thres_pos]
             sel_pos = poses[se_pos]
-            # print(np.array(self.body['label'])[sel_pos])
+            print(np.array(self.body['label'])[sel_pos])
         else:
             sel_pos = np.array([])
             print('null')
@@ -968,7 +968,7 @@ class MAR(object):
             se_neg = np.argsort(prob_neg)[:length_neg]
             se_neg = [s for s in se_neg if prob_neg[s]<thres_neg]
             sel_neg = negs[se_neg]
-            # print(np.array(self.body['label'])[sel_neg])
+            print(np.array(self.body['label'])[sel_neg])
         else:
             sel_neg = np.array([])
             print('null')
