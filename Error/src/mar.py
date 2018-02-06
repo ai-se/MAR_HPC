@@ -14,7 +14,7 @@ class MAR(object):
     def __init__(self):
         self.fea_num = 4000
         self.step = 10
-        self.enough = 20
+        self.enough = 30
         self.kept=50
         self.atleast=100
         self.syn_thres = 0.8
@@ -936,7 +936,7 @@ class MAR(object):
     ## Get suspecious codes
     def susp(self,clf):
         thres_pos = .5
-        thres_neg = .1
+        thres_neg = .2
         length_pos = 1
         length_neg = 50
 
