@@ -823,7 +823,8 @@ class MAR(object):
         self.body["count"][id] = self.body["count"][id] + 1
 
 
-        if self.body['fixed'][id]==0 and pre=='yes' and pre!=new:
+        if self.body['fixed'][id]==0 and pre!=new:
+        # if self.body['fixed'][id]==0 and pre=='yes' and pre!=new:
             self.code_random(id,label)
 
 
