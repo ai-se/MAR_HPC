@@ -14,13 +14,13 @@ class MAR(object):
     def __init__(self):
         self.fea_num = 4000
         self.step = 10
-        self.enough = 10
+        self.enough = 30
         self.kept=50
         self.atleast=100
         self.syn_thres = 0.8
         self.enable_est = True
         self.interval = 50000000
-        self.er = 0.30
+        self.er = 0.00
 
 
     def create(self,filename):

@@ -1686,7 +1686,7 @@ def error_hpcc(seed = 1):
                 result = BM25(file,queries[file],'est','random')
 
             results[file][cor] = analyze(result)
-    with open("../dump/error_new_hpcc30.pickle","a") as handle:
+    with open("../dump/error_new_hpcc00.pickle","a") as handle:
         pickle.dump(results,handle)
 
 def error_summary():
@@ -1695,10 +1695,10 @@ def error_summary():
     correct = ['none', 'three', 'machine', 'knee']
     total = {"Hall.csv": 104, "Wahono.csv": 62, "Danijel.csv": 48, "K_all3.csv": 45}
     results = []
-    with open("../dump/error_new_hpcc30.pickle","r") as handle:
+    with open("../dump/error_new_hpcc00.pickle","r") as handle:
         # result = pickle.load(handle)
         # result2 = pickle.load(handle)
-        for i in xrange(23):
+        for i in xrange(20):
             results.append(pickle.load(handle))
         # results=[]
         # for i in xrange(30):
