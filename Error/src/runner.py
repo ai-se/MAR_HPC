@@ -1666,7 +1666,7 @@ def error_machine():
 def error_hpcc(seed = 1):
     np.random.seed(int(seed))
     files = ["Hall.csv", "Wahono.csv", "Danijel.csv", "K_all3.csv"]
-    queries = {"Hall.csv": 'defect_prediction', "Wahono.csv": 'defect_prediction', "Danijel.csv": 'defect_prediction_metrics', "K_all3.csv": "systematic_review"}
+    queries = {"Hall.csv": 'defect_prediction', "Wahono.csv": 'defect_prediction', "Danijel.csv": 'defect_prediction_metrics', "K_all3.csv": "literature_review"}
     correct = ['none', 'three', 'machine', 'knee']
 
     results={}
@@ -1698,7 +1698,7 @@ def error_summary():
     with open("../dump/error_new_hpcc00.pickle","r") as handle:
         # result = pickle.load(handle)
         # result2 = pickle.load(handle)
-        for i in xrange(20):
+        for i in xrange(30):
             results.append(pickle.load(handle))
         # results=[]
         # for i in xrange(30):
