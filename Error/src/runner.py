@@ -1245,7 +1245,7 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
             else:
                 if pos >= target:
                     break
-            if pos < read.enough:
+            if pos < 10:
                 for id in a:
                     read.code_error(id, error=error)
             else:
@@ -1666,7 +1666,7 @@ def error_machine():
 def error_hpcc(seed = 1):
     np.random.seed(int(seed))
     files = ["Hall.csv", "Wahono.csv", "Danijel.csv", "K_all3.csv"]
-    queries = {"Hall.csv": 'defect_prediction', "Wahono.csv": 'defect_prediction', "Danijel.csv": 'defect_prediction_metrics', "K_all3.csv": "literature_review"}
+    queries = {"Hall.csv": 'defect_prediction', "Wahono.csv": 'defect_prediction', "Danijel.csv": 'defect_prediction_metrics', "K_all3.csv": "review"}
     correct = ['none', 'three', 'machine', 'knee']
 
     results={}
