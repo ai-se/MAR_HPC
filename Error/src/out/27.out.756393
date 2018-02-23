@@ -1,0 +1,255 @@
+27: Hall.csv: none: {'count': 500, 'truepos': 102, 'falseneg': 0, 'correction': 0, 'unknownyes': 2, 'falsepos': 0, 'unique': 500}
+27: Hall.csv: three: {'count': 980, 'truepos': 102, 'falseneg': 0, 'correction': 0, 'unknownyes': 2, 'falsepos': 0, 'unique': 490}
+27: Hall.csv: machine: []
+[]
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no']
+{'count': 678, 'truepos': 102, 'falseneg': 0, 'correction': 0, 'unknownyes': 2, 'falsepos': 0, 'unique': 520}
+27: Hall.csv: knee: {'count': 646, 'truepos': 102, 'falseneg': 0, 'correction': 0, 'unknownyes': 2, 'falsepos': 0, 'unique': 480}
+27: Wahono.csv: none: {'count': 1210, 'truepos': 59, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 1210}
+27: Wahono.csv: three: {'count': 2220, 'truepos': 59, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 1110}
+27: Wahono.csv: machine: []
+[]
+['yes']
+[]
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+[]
+{'count': 1751, 'truepos': 59, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 1180}
+27: Wahono.csv: knee: {'count': 714, 'truepos': 52, 'falseneg': 0, 'correction': 0, 'unknownyes': 10, 'falsepos': 0, 'unique': 520}
+27: Danijel.csv: none: {'count': 720, 'truepos': 45, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 720}
+27: Danijel.csv: three: {'count': 1500, 'truepos': 45, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 750}
+27: Danijel.csv: machine: ['yes']
+[]
+[]
+[]
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no']
+{'count': 1292, 'truepos': 45, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 780}
+27: Danijel.csv: knee: {'count': 428, 'truepos': 40, 'falseneg': 0, 'correction': 0, 'unknownyes': 8, 'falsepos': 0, 'unique': 300}
+27: K_all3.csv: none: {'count': 510, 'truepos': 42, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 510}
+27: K_all3.csv: three: {'count': 1060, 'truepos': 41, 'falseneg': 0, 'correction': 0, 'unknownyes': 4, 'falsepos': 0, 'unique': 530}
+27: K_all3.csv: machine: ['yes']
+[]
+[]
+[]
+[]
+[]
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+{'count': 780, 'truepos': 42, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 510}
+27: K_all3.csv: knee: {'count': 79, 'truepos': 1, 'falseneg': 0, 'correction': 0, 'unknownyes': 44, 'falsepos': 0, 'unique': 70}
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c3-3>
+Subject: Job 756393: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 27> in cluster <henry2> Done
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 27> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2> at Fri Feb 23 11:12:11 2018.
+Job was executed on host(s) <2*n2c3-3>, in queue <single_chassis>, as user <zyu9> in cluster <henry2> at Fri Feb 23 11:12:14 2018.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Fri Feb 23 11:12:14 2018.
+Terminated at Fri Feb 23 11:53:42 2018.
+Results reported at Fri Feb 23 11:53:42 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 27
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   3473.88 sec.
+    Max Memory :                                 278.84 MB
+    Average Memory :                             223.11 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   1324 MB
+    Max Processes :                              3
+    Max Threads :                                8
+    Run time :                                   2497 sec.
+    Turnaround time :                            2491 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/27.err.756393> for stderr output of this job.
+

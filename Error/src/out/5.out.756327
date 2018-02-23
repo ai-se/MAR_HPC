@@ -1,0 +1,44 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c1-8>
+Subject: Job 756327: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 5> in cluster <henry2> Exited
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 5> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2> at Fri Feb 23 11:08:26 2018.
+Job was executed on host(s) <2*n2c1-8>, in queue <single_chassis>, as user <zyu9> in cluster <henry2> at Fri Feb 23 11:08:28 2018.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Fri Feb 23 11:08:28 2018.
+Terminated at Fri Feb 23 11:11:38 2018.
+Results reported at Fri Feb 23 11:11:38 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 5
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 143.
+
+Resource usage summary:
+
+    CPU time :                                   297.80 sec.
+    Max Memory :                                 176.29 MB
+    Average Memory :                             162.69 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   1222 MB
+    Max Processes :                              3
+    Max Threads :                                8
+    Run time :                                   195 sec.
+    Turnaround time :                            192 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/5.err.756327> for stderr output of this job.
+

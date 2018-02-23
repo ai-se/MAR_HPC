@@ -1,0 +1,239 @@
+30: Hall.csv: none: {'count': 480, 'truepos': 102, 'falseneg': 0, 'correction': 0, 'unknownyes': 2, 'falsepos': 0, 'unique': 480}
+30: Hall.csv: three: {'count': 940, 'truepos': 102, 'falseneg': 0, 'correction': 0, 'unknownyes': 2, 'falsepos': 0, 'unique': 470}
+30: Hall.csv: machine: []
+[]
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+{'count': 613, 'truepos': 101, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 460}
+30: Hall.csv: knee: {'count': 632, 'truepos': 102, 'falseneg': 0, 'correction': 0, 'unknownyes': 2, 'falsepos': 0, 'unique': 460}
+30: Wahono.csv: none: {'count': 1090, 'truepos': 59, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 1090}
+30: Wahono.csv: three: {'count': 2360, 'truepos': 59, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 1180}
+30: Wahono.csv: machine: ['yes']
+[]
+[]
+[]
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+{'count': 1619, 'truepos': 59, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 1100}
+30: Wahono.csv: knee: {'count': 1046, 'truepos': 58, 'falseneg': 0, 'correction': 0, 'unknownyes': 4, 'falsepos': 0, 'unique': 840}
+30: Danijel.csv: none: {'count': 710, 'truepos': 45, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 710}
+30: Danijel.csv: three: {'count': 1400, 'truepos': 45, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 700}
+30: Danijel.csv: machine: ['yes']
+[]
+['yes']
+[]
+['yes']
+[]
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no']
+{'count': 1222, 'truepos': 45, 'falseneg': 0, 'correction': 0, 'unknownyes': 3, 'falsepos': 0, 'unique': 750}
+30: Danijel.csv: knee: {'count': 581, 'truepos': 43, 'falseneg': 0, 'correction': 0, 'unknownyes': 5, 'falsepos': 0, 'unique': 430}
+30: K_all3.csv: none: {'count': 460, 'truepos': 41, 'falseneg': 0, 'correction': 0, 'unknownyes': 4, 'falsepos': 0, 'unique': 460}
+30: K_all3.csv: three: {'count': 960, 'truepos': 41, 'falseneg': 0, 'correction': 0, 'unknownyes': 4, 'falsepos': 0, 'unique': 480}
+30: K_all3.csv: machine: ['yes']
+[]
+[]
+[]
+[]
+[]
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no']
+[]
+['no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no' 'no'
+ 'no' 'no' 'no' 'no']
+{'count': 718, 'truepos': 41, 'falseneg': 0, 'correction': 0, 'unknownyes': 4, 'falsepos': 0, 'unique': 480}
+30: K_all3.csv: knee: {'count': 79, 'truepos': 1, 'falseneg': 0, 'correction': 0, 'unknownyes': 44, 'falsepos': 0, 'unique': 70}
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c3-6>
+Subject: Job 756396: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 30> in cluster <henry2> Done
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 30> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2> at Fri Feb 23 11:12:11 2018.
+Job was executed on host(s) <2*n2c3-6>, in queue <single_chassis>, as user <zyu9> in cluster <henry2> at Fri Feb 23 11:12:14 2018.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Fri Feb 23 11:12:14 2018.
+Terminated at Fri Feb 23 11:54:12 2018.
+Results reported at Fri Feb 23 11:54:12 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 30
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   3376.69 sec.
+    Max Memory :                                 283.19 MB
+    Average Memory :                             227.08 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   1328 MB
+    Max Processes :                              3
+    Max Threads :                                8
+    Run time :                                   2528 sec.
+    Turnaround time :                            2521 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/30.err.756396> for stderr output of this job.
+
