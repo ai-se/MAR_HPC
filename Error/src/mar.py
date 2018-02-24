@@ -20,7 +20,7 @@ class MAR(object):
         self.syn_thres = 0.8
         self.enable_est = True
         self.interval = 50000000
-        self.er = 0.00
+        self.er = 0.30
 
 
     def create(self,filename):
@@ -567,7 +567,7 @@ class MAR(object):
         if self.interval<100:
             if self.round==self.interval:
                 self.round=0
-                susp, conf = self.susp(clf)
+                susp, conf = self.susp(clf,C=(len(sample)-len(left))/len(sample))
                 if len(susp) > 0:
                     return susp, conf, susp, conf
             else:
@@ -582,7 +582,7 @@ class MAR(object):
                 self.est_num, self.est = self.estimate_curve(clf, reuse=True, num_neg=len(sample)-len(left))
             else:
                 self.est_num, self.est = self.estimate_curve(clf, reuse=False, num_neg=len(sample)-len(left))
-            ## correct errors with human-machine disagreements ##
+            # ## correct errors with human-machine disagreements ##
             # if self.interval<100:
             #     if self.round==self.interval:
             #         self.round=0
@@ -591,7 +591,7 @@ class MAR(object):
             #             return susp, conf, susp, conf
             #     else:
             #         self.round = self.round + 1
-        #####################################################
+        ####################################################
             return uncertain_id, self.est[uncertain_id], certain_id, self.est[certain_id]
         else:
             return uncertain_id, uncertain_prob, certain_id, certain_prob
@@ -654,79 +654,6 @@ class MAR(object):
             return uncertain_id, self.est[uncertain_id], certain_id, self.est[certain_id]
         else:
             return uncertain_id, uncertain_prob, certain_id, certain_prob
-
-    ## not in use currently
-    def train_reuse_random(self):
-        thres=50
-
-        clf = svm.SVC(kernel='linear', probability=True)
-        poses = np.where(np.array(self.body['code']) == "yes")[0]
-        negs = np.where(np.array(self.body['code']) == "no")[0]
-        pos, neg, total = self.get_numbers()
-        if pos == 0 or pos + neg < thres:
-            left=poses
-            decayed = list(left) + list(negs)
-        else:
-            left = np.array(poses)[np.argsort(np.array(self.body['time'])[poses])[self.last_pos:]]
-            negs = np.array(negs)[np.argsort(np.array(self.body['time'])[negs])[self.last_neg:]]
-            decayed = list(left)+list(negs)
-        clf.fit(self.csr_mat[decayed], np.array(self.body['code'])[decayed])
-        ## aggressive undersampling ##
-        if len(poses)>=self.enough:
-
-            train_dist = clf.decision_function(self.csr_mat[negs])
-            negs_sel = np.argsort(np.abs(train_dist))[::-1][:len(left)]
-            sample = list(left) + list(negs[negs_sel])
-            clf.fit(self.csr_mat[sample], np.array(self.body['code'])[sample])
-            self.estimate_curve(clf)
-
-        uncertain_id, uncertain_prob = self.uncertain(clf)
-        certain_id, certain_prob = self.certain(clf)
-        if pos == 0 or pos + neg < thres:
-            return uncertain_id, uncertain_prob, np.random.choice(list(set(certain_id) | set(self.random())),
-                                                                  size=np.min((self.step, len(
-                                                                      set(certain_id) | set(self.random())))),
-                                                                  replace=False), certain_prob
-        else:
-            return uncertain_id, uncertain_prob, certain_id, certain_prob
-
-
-
-    ## Train_kept model ##
-    def train_kept(self):
-        clf = svm.SVC(kernel='linear', probability=True)
-        poses = np.where(np.array(self.body['code']) == "yes")[0]
-        negs = np.where(np.array(self.body['code']) == "no")[0]
-
-        ## only use latest poses
-        left = np.array(poses)[np.argsort(np.array(self.body['time'])[poses])[::-1][:self.kept]]
-        negs = np.array(negs)[np.argsort(np.array(self.body['time'])[poses])[::-1][:self.kept]]
-        decayed = list(left)+list(negs)
-        unlabeled = np.where(np.array(self.body['code']) == "undetermined")[0]
-        try:
-            unlabeled = np.random.choice(unlabeled, size=np.max((len(decayed),self.atleast)), replace=False)
-        except:
-            pass
-
-        labels = np.array([x if x != 'undetermined' else 'no' for x in self.body['code']])
-        all_neg = list(negs) + list(unlabeled)
-        all = list(decayed) + list(unlabeled)
-
-        clf.fit(self.csr_mat[all], labels[all])
-        ## aggressive undersampling ##
-        if len(poses) >= self.enough:
-            train_dist = clf.decision_function(self.csr_mat[all_neg])
-            pos_at = list(clf.classes_).index("yes")
-            if pos_at:
-                train_dist=-train_dist
-            negs_sel = np.argsort(train_dist)[::-1][:len(left)]
-            sample = list(left) + list(np.array(all_neg)[negs_sel])
-            clf.fit(self.csr_mat[sample], labels[sample])
-            self.estimate_curve(clf)
-
-        uncertain_id, uncertain_prob = self.uncertain(clf)
-        certain_id, certain_prob = self.certain(clf)
-        return uncertain_id, uncertain_prob, certain_id, certain_prob
 
 
     ## Get certain ##
@@ -935,11 +862,11 @@ class MAR(object):
             return False
 
     ## Get suspecious codes
-    def susp(self,clf):
-        thres_pos = .5
-        thres_neg = .2
-        length_pos = 1
-        length_neg = 50
+    def susp(self,clf,C):
+        thres_pos = 1-C
+        thres_neg = C
+        length_pos = 1000
+        length_neg = 5000
 
         poses = np.where(np.array(self.body['code']) == "yes")[0]
         negs = np.where(np.array(self.body['code']) == "no")[0]
@@ -981,10 +908,10 @@ class MAR(object):
 
     ## Get suspecious codes
     def susp_est(self):
-        thres_pos = 0.5
-        thres_neg = 0.02
-        length_pos = 1
-        length_neg = 50
+        thres_pos = 0.3
+        thres_neg = 0.9
+        length_pos = 10
+        length_neg = 50000
 
         poses = np.where(np.array(self.body['code']) == "yes")[0]
         negs = np.where(np.array(self.body['code']) == "no")[0]
@@ -1007,7 +934,7 @@ class MAR(object):
             se_pos = np.argsort(prob_pos)[:length_pos]
             se_pos = [s for s in se_pos if prob_pos[s]<thres_pos]
             sel_pos = poses[se_pos]
-            # print(np.array(self.body['label'])[sel_pos])
+            print(np.array(self.body['label'])[sel_pos])
         else:
             sel_pos = np.array([])
             print('null')
@@ -1017,7 +944,7 @@ class MAR(object):
             se_neg = np.argsort(prob_neg)[::-1][:length_neg]
             se_neg = [s for s in se_neg if prob_neg[s]>thres_neg]
             sel_neg = negs[se_neg]
-            # print(np.array(self.body['label'])[sel_neg])
+            print(np.array(self.body['label'])[sel_neg])
         else:
             sel_neg = np.array([])
             print('null')
