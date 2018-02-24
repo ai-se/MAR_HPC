@@ -1230,7 +1230,7 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
                 if stopat * read.est_num <= pos:
                     break
             elif stop == 'knee':
-                if pos>0:
+                if pos>=10:
                     if read.knee():
                         if error=='random':
                             coded = np.where(np.array(read.body['code']) != "undetermined")[0]
