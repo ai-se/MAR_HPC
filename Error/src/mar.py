@@ -14,13 +14,13 @@ class MAR(object):
     def __init__(self):
         self.fea_num = 4000
         self.step = 10
-        self.enough = 30
+        self.enough = 25
         self.kept=50
         self.atleast=100
         self.syn_thres = 0.8
         self.enable_est = True
         self.interval = 50000000
-        self.er = 0.00
+        self.er = 0.30
 
 
     def create(self,filename):
@@ -863,9 +863,9 @@ class MAR(object):
 
     ## Get suspecious codes
     def susp(self,clf,C=0.5):
-        thres_pos = C
-        thres_neg = 1-C
-        length_pos = 100
+        thres_pos = C*1.6
+        thres_neg = 1-C*1.6
+        length_pos = 1000
         length_neg = 1900
 
         poses = np.where(np.array(self.body['code']) == "yes")[0]
