@@ -1,0 +1,72 @@
+18: Hall.csv: none: {'count': 1350, 'truepos': 63, 'falseneg': 40, 'correction': 0, 'unknownyes': 1, 'falsepos': 4, 'unique': 1350}
+18: Hall.csv: three: {'count': 1530, 'truepos': 82, 'falseneg': 20, 'correction': 43, 'unknownyes': 2, 'falsepos': 0, 'unique': 740}
+18: Hall.csv: machine: {'count': 838, 'truepos': 95, 'falseneg': 7, 'correction': 21, 'unknownyes': 2, 'falsepos': 3, 'unique': 520}
+18: Hall.csv: knee: {'count': 620, 'truepos': 90, 'falseneg': 11, 'correction': 17, 'unknownyes': 3, 'falsepos': 3, 'unique': 420}
+18: Wahono.csv: none: {'count': 1760, 'truepos': 45, 'falseneg': 16, 'correction': 0, 'unknownyes': 1, 'falsepos': 7, 'unique': 1760}
+18: Wahono.csv: three: {'count': 3338, 'truepos': 50, 'falseneg': 10, 'correction': 33, 'unknownyes': 2, 'falsepos': 0, 'unique': 1650}
+18: Wahono.csv: machine: {'count': 2757, 'truepos': 53, 'falseneg': 5, 'correction': 12, 'unknownyes': 4, 'falsepos': 10, 'unique': 1530}
+18: Wahono.csv: knee: {'count': 572, 'truepos': 34, 'falseneg': 11, 'correction': 4, 'unknownyes': 17, 'falsepos': 0, 'unique': 370}
+18: Danijel.csv: none: {'count': 1050, 'truepos': 33, 'falseneg': 13, 'correction': 0, 'unknownyes': 2, 'falsepos': 2, 'unique': 1050}
+18: Danijel.csv: three: {'count': 2122, 'truepos': 36, 'falseneg': 10, 'correction': 21, 'unknownyes': 2, 'falsepos': 0, 'unique': 1050}
+18: Danijel.csv: machine: {'count': 1969, 'truepos': 41, 'falseneg': 5, 'correction': 14, 'unknownyes': 2, 'falsepos': 4, 'unique': 1050}
+18: Danijel.csv: knee: {'count': 776, 'truepos': 34, 'falseneg': 9, 'correction': 8, 'unknownyes': 5, 'falsepos': 0, 'unique': 590}
+18: K_all3.csv: none: {'count': 680, 'truepos': 31, 'falseneg': 13, 'correction': 0, 'unknownyes': 1, 'falsepos': 4, 'unique': 680}
+18: K_all3.csv: three: {'count': 1369, 'truepos': 34, 'falseneg': 7, 'correction': 28, 'unknownyes': 4, 'falsepos': 0, 'unique': 670}
+18: K_all3.csv: machine: {'count': 996, 'truepos': 40, 'falseneg': 3, 'correction': 11, 'unknownyes': 2, 'falsepos': 7, 'unique': 530}
+18: K_all3.csv: knee: 
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2b3-11>
+Subject: Job 760344: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 18> in cluster <henry2> Exited
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 18> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2> at Sun Feb 25 12:29:24 2018.
+Job was executed on host(s) <2*n2b3-11>, in queue <single_chassis>, as user <zyu9> in cluster <henry2> at Sun Feb 25 12:29:29 2018.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Sun Feb 25 12:29:29 2018.
+Terminated at Sun Feb 25 13:41:00 2018.
+Results reported at Sun Feb 25 13:41:00 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 18
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   5321.04 sec.
+    Max Memory :                                 287.56 MB
+    Average Memory :                             229.16 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   1331 MB
+    Max Processes :                              3
+    Max Threads :                                8
+    Run time :                                   4305 sec.
+    Turnaround time :                            4296 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS: The stderr output (if any) follows:
+
+Traceback (most recent call last):
+  File "runner.py", line 352, in <module>
+    eval(cmd())
+  File "<string>", line 1, in <module>
+  File "runner.py", line 292, in error_hpcc
+    result = BM25(file,queries[file],'knee','random')
+  File "runner.py", line 193, in BM25
+    seq = coded[np.argsort(read.body['time'][coded])]
+TypeError: only integer scalar arrays can be converted to a scalar index
+
+
+PS:
+
+Fail to open stderr file ./err/18.err.760344: No such file or directory.
+The stderr output is included in this report.
+

@@ -1,0 +1,64 @@
+25: Hall.csv: none: {'count': 1330, 'truepos': 76, 'falseneg': 27, 'correction': 0, 'unknownyes': 1, 'falsepos': 3, 'unique': 1330}
+25: Hall.csv: three: {'count': 1656, 'truepos': 83, 'falseneg': 19, 'correction': 48, 'unknownyes': 2, 'falsepos': 0, 'unique': 800}
+25: Hall.csv: machine: {'count': 2330, 'truepos': 94, 'falseneg': 9, 'correction': 22, 'unknownyes': 1, 'falsepos': 12, 'unique': 1720}
+25: Hall.csv: knee: {'count': 583, 'truepos': 89, 'falseneg': 12, 'correction': 20, 'unknownyes': 3, 'falsepos': 1, 'unique': 430}
+25: Wahono.csv: none: {'count': 1480, 'truepos': 45, 'falseneg': 14, 'correction': 0, 'unknownyes': 3, 'falsepos': 6, 'unique': 1480}
+25: Wahono.csv: three: {'count': 3130, 'truepos': 44, 'falseneg': 17, 'correction': 44, 'unknownyes': 1, 'falsepos': 0, 'unique': 1540}
+25: Wahono.csv: machine: {'count': 2549, 'truepos': 55, 'falseneg': 5, 'correction': 19, 'unknownyes': 2, 'falsepos': 7, 'unique': 1400}
+25: Wahono.csv: knee: {'count': 311, 'truepos': 34, 'falseneg': 5, 'correction': 5, 'unknownyes': 23, 'falsepos': 0, 'unique': 190}
+25: Danijel.csv: none: {'count': 1410, 'truepos': 30, 'falseneg': 16, 'correction': 0, 'unknownyes': 2, 'falsepos': 8, 'unique': 1410}
+25: Danijel.csv: three: {'count': 2111, 'truepos': 33, 'falseneg': 13, 'correction': 28, 'unknownyes': 2, 'falsepos': 0, 'unique': 1040}
+25: Danijel.csv: machine: {'count': 1428, 'truepos': 42, 'falseneg': 3, 'correction': 11, 'unknownyes': 3, 'falsepos': 5, 'unique': 760}
+25: Danijel.csv: knee: {'count': 642, 'truepos': 34, 'falseneg': 9, 'correction': 6, 'unknownyes': 5, 'falsepos': 0, 'unique': 520}
+25: K_all3.csv: none: {'count': 640, 'truepos': 32, 'falseneg': 9, 'correction': 0, 'unknownyes': 4, 'falsepos': 3, 'unique': 640}
+25: K_all3.csv: three: {'count': 1172, 'truepos': 34, 'falseneg': 9, 'correction': 30, 'unknownyes': 2, 'falsepos': 1, 'unique': 570}
+25: K_all3.csv: machine: {'count': 915, 'truepos': 38, 'falseneg': 4, 'correction': 5, 'unknownyes': 3, 'falsepos': 7, 'unique': 510}
+25: K_all3.csv: knee: {'count': 2033, 'truepos': 39, 'falseneg': 6, 'correction': 11, 'unknownyes': 0, 'falsepos': 7, 'unique': 1610}
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c1-14>
+Subject: Job 760351: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 25> in cluster <henry2> Done
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 25> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2> at Sun Feb 25 12:29:24 2018.
+Job was executed on host(s) <2*n2c1-14>, in queue <single_chassis>, as user <zyu9> in cluster <henry2> at Sun Feb 25 12:29:29 2018.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Sun Feb 25 12:29:29 2018.
+Terminated at Sun Feb 25 13:42:13 2018.
+Results reported at Sun Feb 25 13:42:13 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 25
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   5559.92 sec.
+    Max Memory :                                 283.43 MB
+    Average Memory :                             221.28 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   1327 MB
+    Max Processes :                              3
+    Max Threads :                                8
+    Run time :                                   4368 sec.
+    Turnaround time :                            4369 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS: The stderr output (if any) follows:
+
+
+
+PS:
+
+Fail to open stderr file ./err/25.err.760351: No such file or directory.
+The stderr output is included in this report.
+

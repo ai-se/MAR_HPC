@@ -1,0 +1,82 @@
+24: Hall.csv: none: {'count': 2040, 'truepos': 69, 'falseneg': 34, 'correction': 0, 'unknownyes': 1, 'falsepos': 7, 'unique': 2040}
+24: Hall.csv: three: {'count': 1465, 'truepos': 78, 'falseneg': 24, 'correction': 41, 'unknownyes': 2, 'falsepos': 0, 'unique': 710}
+24: Hall.csv: machine: {'count': 899, 'truepos': 94, 'falseneg': 8, 'correction': 21, 'unknownyes': 2, 'falsepos': 0, 'unique': 570}
+24: Hall.csv: knee: {'count': 508, 'truepos': 90, 'falseneg': 9, 'correction': 13, 'unknownyes': 5, 'falsepos': 1, 'unique': 330}
+24: Wahono.csv: none: {'count': 1680, 'truepos': 45, 'falseneg': 15, 'correction': 0, 'unknownyes': 2, 'falsepos': 2, 'unique': 1680}
+24: Wahono.csv: three: {'count': 4795, 'truepos': 48, 'falseneg': 14, 'correction': 32, 'unknownyes': 0, 'falsepos': 0, 'unique': 2380}
+24: Wahono.csv: machine: {'count': 2796, 'truepos': 55, 'falseneg': 5, 'correction': 7, 'unknownyes': 2, 'falsepos': 7, 'unique': 1510}
+24: Wahono.csv: knee: {'count': 1492, 'truepos': 49, 'falseneg': 12, 'correction': 10, 'unknownyes': 1, 'falsepos': 1, 'unique': 1150}
+24: Danijel.csv: none: {'count': 1200, 'truepos': 32, 'falseneg': 15, 'correction': 0, 'unknownyes': 1, 'falsepos': 6, 'unique': 1200}
+24: Danijel.csv: three: {'count': 2769, 'truepos': 35, 'falseneg': 12, 'correction': 27, 'unknownyes': 1, 'falsepos': 0, 'unique': 1370}
+24: Danijel.csv: machine: {'count': 1475, 'truepos': 44, 'falseneg': 2, 'correction': 8, 'unknownyes': 2, 'falsepos': 4, 'unique': 800}
+24: Danijel.csv: knee: {'count': 1104, 'truepos': 39, 'falseneg': 7, 'correction': 12, 'unknownyes': 2, 'falsepos': 1, 'unique': 820}
+24: K_all3.csv: none: {'count': 490, 'truepos': 34, 'falseneg': 7, 'correction': 0, 'unknownyes': 4, 'falsepos': 5, 'unique': 490}
+24: K_all3.csv: three: {'count': 1692, 'truepos': 36, 'falseneg': 9, 'correction': 28, 'unknownyes': 0, 'falsepos': 0, 'unique': 830}
+24: K_all3.csv: machine: {'count': 1163, 'truepos': 39, 'falseneg': 3, 'correction': 5, 'unknownyes': 3, 'falsepos': 15, 'unique': 650}
+24: K_all3.csv: knee: 
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c1-5>
+Subject: Job 760350: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 24> in cluster <henry2> Exited
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 24> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2> at Sun Feb 25 12:29:24 2018.
+Job was executed on host(s) <1*n2c1-5>, in queue <single_chassis>, as user <zyu9> in cluster <henry2> at Sun Feb 25 12:29:29 2018.
+                            <1*n2c1-13>
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Sun Feb 25 12:29:29 2018.
+Terminated at Sun Feb 25 13:55:03 2018.
+Results reported at Sun Feb 25 13:55:03 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 24
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   6495.32 sec.
+    Max Memory :                                 281.32 MB
+    Average Memory :                             221.28 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   1327 MB
+    Max Processes :                              3
+    Max Threads :                                8
+    Run time :                                   5147 sec.
+    Turnaround time :                            5139 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS: The stderr output (if any) follows:
+
+Traceback (most recent call last):
+  File "runner.py", line 352, in <module>
+    eval(cmd())
+  File "<string>", line 1, in <module>
+  File "runner.py", line 292, in error_hpcc
+    result = BM25(file,queries[file],'knee','random')
+  File "runner.py", line 206, in BM25
+    a,b,c,d =read.train(weighting=True,pne=True)
+  File "/home/zyu9/projects/MAR_HPC/Error/src/mar.py", line 550, in train
+    train_dist = clf.decision_function(self.csr_mat[all_neg])
+  File "/share/tjmenzie/zyu9/miniconda2/lib/python2.7/site-packages/sklearn/svm/base.py", line 527, in decision_function
+    dec = self._decision_function(X)
+  File "/share/tjmenzie/zyu9/miniconda2/lib/python2.7/site-packages/sklearn/svm/base.py", line 388, in _decision_function
+    dec_func = self._sparse_decision_function(X)
+  File "/share/tjmenzie/zyu9/miniconda2/lib/python2.7/site-packages/sklearn/svm/base.py", line 434, in _sparse_decision_function
+    self.probA_, self.probB_)
+KeyboardInterrupt
+
+
+PS:
+
+Fail to open stderr file ./err/24.err.760350: No such file or directory.
+The stderr output is included in this report.
+
