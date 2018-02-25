@@ -1,0 +1,79 @@
+1: Hall.csv: none: {'count': 1310, 'truepos': 72, 'falseneg': 31, 'correction': 0, 'unknownyes': 1, 'falsepos': 3, 'unique': 1310}
+1: Hall.csv: three: {'count': 3662, 'truepos': 78, 'falseneg': 25, 'correction': 53, 'unknownyes': 1, 'falsepos': 0, 'unique': 1800}
+1: Hall.csv: machine: {'count': 684, 'truepos': 92, 'falseneg': 10, 'correction': 30, 'unknownyes': 2, 'falsepos': 1, 'unique': 500}
+1: Hall.csv: knee: {'count': 692, 'truepos': 93, 'falseneg': 9, 'correction': 21, 'unknownyes': 2, 'falsepos': 1, 'unique': 500}
+1: Wahono.csv: none: {'count': 1610, 'truepos': 40, 'falseneg': 20, 'correction': 0, 'unknownyes': 2, 'falsepos': 2, 'unique': 1610}
+1: Wahono.csv: three: {'count': 3561, 'truepos': 39, 'falseneg': 22, 'correction': 34, 'unknownyes': 1, 'falsepos': 0, 'unique': 1760}
+1: Wahono.csv: machine: {'count': 2578, 'truepos': 55, 'falseneg': 7, 'correction': 18, 'unknownyes': 0, 'falsepos': 0, 'unique': 1850}
+1: Wahono.csv: knee: {'count': 173, 'truepos': 21, 'falseneg': 3, 'correction': 2, 'unknownyes': 38, 'falsepos': 0, 'unique': 120}
+1: Danijel.csv: none: {'count': 1820, 'truepos': 27, 'falseneg': 21, 'correction': 0, 'unknownyes': 0, 'falsepos': 5, 'unique': 1820}
+1: Danijel.csv: three: {'count': 2308, 'truepos': 36, 'falseneg': 10, 'correction': 24, 'unknownyes': 2, 'falsepos': 0, 'unique': 1140}
+1: Danijel.csv: machine: {'count': 1064, 'truepos': 41, 'falseneg': 5, 'correction': 6, 'unknownyes': 2, 'falsepos': 2, 'unique': 760}
+1: Danijel.csv: knee: {'count': 510, 'truepos': 37, 'falseneg': 2, 'correction': 5, 'unknownyes': 9, 'falsepos': 1, 'unique': 320}
+1: K_all3.csv: none: {'count': 750, 'truepos': 33, 'falseneg': 10, 'correction': 0, 'unknownyes': 2, 'falsepos': 5, 'unique': 750}
+1: K_all3.csv: three: 
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2b1-13>
+Subject: Job 759932: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 1> in cluster <henry2> Exited
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 1> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2> at Sat Feb 24 20:13:27 2018.
+Job was executed on host(s) <2*n2b1-13>, in queue <single_chassis>, as user <zyu9> in cluster <henry2> at Sat Feb 24 20:13:31 2018.
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Sat Feb 24 20:13:31 2018.
+Terminated at Sun Feb 25 09:11:12 2018.
+Results reported at Sun Feb 25 09:11:12 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 1
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   47873.39 sec.
+    Max Memory :                                 513.87 MB
+    Average Memory :                             378.07 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   1557 MB
+    Max Processes :                              3
+    Max Threads :                                8
+    Run time :                                   46675 sec.
+    Turnaround time :                            46665 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS: The stderr output (if any) follows:
+
+Traceback (most recent call last):
+  File "runner.py", line 352, in <module>
+    eval(cmd())
+  File "<string>", line 1, in <module>
+  File "runner.py", line 288, in error_hpcc
+    result = BM25(file,queries[file],'est','three')
+  File "runner.py", line 206, in BM25
+    a,b,c,d =read.train(weighting=True,pne=True)
+  File "/home/zyu9/projects/MAR_HPC/Error/src/mar.py", line 584, in train
+    self.est_num, self.est = self.estimate_curve(clf, reuse=False, num_neg=len(sample)-len(left))
+  File "/home/zyu9/projects/MAR_HPC/Error/src/mar.py", line 395, in estimate_curve
+    es.fit(prob[all], y[all])
+  File "/share/tjmenzie/zyu9/miniconda2/lib/python2.7/site-packages/sklearn/linear_model/logistic.py", line 1233, in fit
+    sample_weight=sample_weight)
+  File "/share/tjmenzie/zyu9/miniconda2/lib/python2.7/site-packages/sklearn/svm/base.py", line 890, in _fit_liblinear
+    epsilon, sample_weight)
+KeyboardInterrupt
+
+
+PS:
+
+Fail to open stderr file ./err/1.err.759932: No such file or directory.
+The stderr output is included in this report.
+

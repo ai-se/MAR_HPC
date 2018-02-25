@@ -308,9 +308,9 @@ def error_summary():
     with open("../dump/error_new_hpcc30.pickle","r") as handle:
         # result = pickle.load(handle)
         # result2 = pickle.load(handle)
-        for i in xrange(3):
+        for i in xrange(12):
             results.append(pickle.load(handle))
-            set_trace()
+            
 
         # results=[]
         # for i in xrange(30):

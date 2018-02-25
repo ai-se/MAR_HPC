@@ -1,0 +1,65 @@
+29: Hall.csv: none: {'count': 1030, 'truepos': 68, 'falseneg': 35, 'correction': 0, 'unknownyes': 1, 'falsepos': 3, 'unique': 1030}
+29: Hall.csv: three: {'count': 2044, 'truepos': 74, 'falseneg': 28, 'correction': 42, 'unknownyes': 2, 'falsepos': 0, 'unique': 1000}
+29: Hall.csv: machine: {'count': 781, 'truepos': 93, 'falseneg': 9, 'correction': 30, 'unknownyes': 2, 'falsepos': 2, 'unique': 560}
+29: Hall.csv: knee: {'count': 802, 'truepos': 90, 'falseneg': 12, 'correction': 22, 'unknownyes': 2, 'falsepos': 5, 'unique': 590}
+29: Wahono.csv: none: {'count': 1880, 'truepos': 45, 'falseneg': 15, 'correction': 0, 'unknownyes': 2, 'falsepos': 12, 'unique': 1880}
+29: Wahono.csv: three: {'count': 3450, 'truepos': 46, 'falseneg': 14, 'correction': 28, 'unknownyes': 2, 'falsepos': 0, 'unique': 1710}
+29: Wahono.csv: machine: {'count': 1784, 'truepos': 56, 'falseneg': 3, 'correction': 15, 'unknownyes': 3, 'falsepos': 1, 'unique': 1280}
+29: Wahono.csv: knee: {'count': 568, 'truepos': 39, 'falseneg': 6, 'correction': 6, 'unknownyes': 17, 'falsepos': 1, 'unique': 350}
+29: Danijel.csv: none: {'count': 1320, 'truepos': 34, 'falseneg': 13, 'correction': 0, 'unknownyes': 1, 'falsepos': 2, 'unique': 1320}
+29: Danijel.csv: three: {'count': 3449, 'truepos': 35, 'falseneg': 12, 'correction': 22, 'unknownyes': 1, 'falsepos': 0, 'unique': 1710}
+29: Danijel.csv: machine: {'count': 956, 'truepos': 37, 'falseneg': 9, 'correction': 10, 'unknownyes': 2, 'falsepos': 3, 'unique': 690}
+29: Danijel.csv: knee: {'count': 1096, 'truepos': 42, 'falseneg': 3, 'correction': 8, 'unknownyes': 3, 'falsepos': 0, 'unique': 780}
+29: K_all3.csv: none: {'count': 640, 'truepos': 32, 'falseneg': 11, 'correction': 0, 'unknownyes': 2, 'falsepos': 6, 'unique': 640}
+29: K_all3.csv: three: {'count': 1091, 'truepos': 38, 'falseneg': 4, 'correction': 31, 'unknownyes': 3, 'falsepos': 0, 'unique': 530}
+29: K_all3.csv: machine: {'count': 815, 'truepos': 35, 'falseneg': 6, 'correction': 14, 'unknownyes': 4, 'falsepos': 3, 'unique': 590}
+29: K_all3.csv: knee: {'count': 811, 'truepos': 35, 'falseneg': 5, 'correction': 7, 'unknownyes': 5, 'falsepos': 4, 'unique': 590}
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c1-9>
+Subject: Job 759960: </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 29> in cluster <henry2> Done
+
+Job </share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 29> was submitted from host <login01.hpc.ncsu.edu> by user <zyu9> in cluster <henry2> at Sat Feb 24 20:13:28 2018.
+Job was executed on host(s) <1*n2c1-9>, in queue <single_chassis>, as user <zyu9> in cluster <henry2> at Sat Feb 24 20:13:31 2018.
+                            <1*n2c1-4>
+</home/zyu9> was used as the home directory.
+</home/zyu9/projects/MAR_HPC/Error/src> was used as the working directory.
+Started at Sat Feb 24 20:13:31 2018.
+Terminated at Sat Feb 24 21:23:46 2018.
+Results reported at Sat Feb 24 21:23:46 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/share/tjmenzie/zyu9/miniconda2/bin/python2.7 runner.py error_hpcc 29
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   5462.76 sec.
+    Max Memory :                                 289.88 MB
+    Average Memory :                             231.87 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   1332 MB
+    Max Processes :                              3
+    Max Threads :                                8
+    Run time :                                   4228 sec.
+    Turnaround time :                            4218 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS: The stderr output (if any) follows:
+
+
+
+PS:
+
+Fail to open stderr file ./err/29.err.759960: No such file or directory.
+The stderr output is included in this report.
+
