@@ -274,7 +274,7 @@ def error_machine():
         BM25(file,queries[file],'est','random')
 
 def error_hpcc(seed = 1):
-    np.random.seed(int(seed))
+    # np.random.seed(int(seed))
     files = ["Hall.csv", "Wahono.csv", "Danijel.csv", "K_all3.csv"]
     queries = {"Hall.csv": 'defect_prediction', "Wahono.csv": 'defect_prediction', "Danijel.csv": 'defect_prediction_metrics', "K_all3.csv": "literature_review"}
     correct = ['none', 'three', 'machine', 'knee']

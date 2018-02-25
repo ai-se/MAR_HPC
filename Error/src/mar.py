@@ -567,7 +567,7 @@ class MAR(object):
         if self.interval<100:
             if self.round==self.interval:
                 self.round=0
-                susp, conf = self.susp(clf)
+                susp, conf = self.susp(clf,C=len(left)/len(sample))
                 if len(susp) > 0:
                     return susp, conf, susp, conf
             else:
@@ -862,11 +862,11 @@ class MAR(object):
             return False
 
     ## Get suspecious codes
-    def susp(self,clf):
-        thres_pos = 1
-        thres_neg = 1
-        length_pos = 1
-        length_neg = 19
+    def susp(self,clf,C=0.5):
+        thres_pos = C
+        thres_neg = 1-C
+        length_pos = 100
+        length_neg = 1900
 
         poses = np.where(np.array(self.body['code']) == "yes")[0]
         negs = np.where(np.array(self.body['code']) == "no")[0]
