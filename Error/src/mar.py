@@ -885,7 +885,7 @@ class MAR(object):
             se_pos = np.argsort(prob_pos)[:length_pos]
             se_pos = [s for s in se_pos if prob_pos[s]<thres_pos]
             sel_pos = poses[se_pos]
-            print(np.array(self.body['label'])[sel_pos])
+            # print(np.array(self.body['label'])[sel_pos])
         else:
             sel_pos = np.array([])
             print('null')
@@ -896,7 +896,7 @@ class MAR(object):
             se_neg = np.argsort(prob_neg)[:length_neg]
             se_neg = [s for s in se_neg if prob_neg[s]<thres_neg]
             sel_neg = negs[se_neg]
-            print(np.array(self.body['label'])[sel_neg])
+            # print(np.array(self.body['label'])[sel_neg])
         else:
             sel_neg = np.array([])
             print('null')

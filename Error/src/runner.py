@@ -182,10 +182,10 @@ def BM25(filename, query, stop='true', error='none', interval = 100000):
     while True:
         pos, neg, total = read.get_error()
         # pos, neg, total = read.get_numbers()
-        try:
-            print("%d, %d, %d" %(pos,pos+neg, read.est_num))
-        except:
-            print("%d, %d" % (pos, pos + neg))
+        # try:
+        #     print("%d, %d, %d" %(pos,pos+neg, read.est_num))
+        # except:
+        #     print("%d, %d" % (pos, pos + neg))
 
         if pos + neg >= total:
             if stop=='knee' and error=='random':
@@ -308,8 +308,10 @@ def error_summary():
     with open("../dump/error_new_hpcc30.pickle","r") as handle:
         # result = pickle.load(handle)
         # result2 = pickle.load(handle)
-        for i in xrange(19):
+        for i in xrange(3):
             results.append(pickle.load(handle))
+            set_trace()
+
         # results=[]
         # for i in xrange(30):
         #     results.append(pickle.load(handle))
