@@ -305,7 +305,7 @@ def error_summary():
     correct = ['none', 'three', 'machine', 'knee']
     total = {"Hall.csv": 104, "Wahono.csv": 62, "Danijel.csv": 48, "K_all3.csv": 45}
     results = []
-    with open("../dump/error_new_hpcc30.pickle","r") as handle:
+    with open("../dump/error_new_hpcc30_old.pickle","r") as handle:
         # result = pickle.load(handle)
         # result2 = pickle.load(handle)
         for i in xrange(18):
@@ -341,6 +341,27 @@ def error_summary():
     for dataset in files:
         # out = dataset.split('.')[0]+" & " + ' & '.join([str(int(np.median(trans[dataset][cor]['truepos'])))+" / "+ str(int(np.median(trans[dataset][cor]['count']))) +" / "+ str(int(np.median(trans[dataset][cor]['falseneg']))) +" / "+ str(int(np.median(trans[dataset][cor]['falsepos']))) for cor in correct]) + '\\\\'
         out = dataset.split('.')[0]+" & " + ' & '.join([str(round(np.median(np.array(trans[dataset][cor]['truepos'])/total[dataset]),2))+" / "+str(round(np.median(np.array(trans[dataset][cor]['truepos'])/(np.array(trans[dataset][cor]['truepos'])+np.array(trans[dataset][cor]['falsepos']))),2))+" / "+str(int(np.median(trans[dataset][cor]['count']))) for cor in correct]) + '\\\\'
+        print(out)
+        print("\\hline")
+    print("\\end{tabular}")
+
+
+    # IQR
+
+    def iqr(nums):
+        return np.percentile(nums,75)-np.percentile(nums,25)
+
+    print("\\begin{tabular}{ |l|" + "c|" * len(correct) + " }")
+    print("\\hline")
+    print("  & " + " & ".join(correct) + "  \\\\")
+    print("\\hline")
+    for dataset in files:
+        # out = dataset.split('.')[0]+" & " + ' & '.join([str(int(np.median(trans[dataset][cor]['truepos'])))+" / "+ str(int(np.median(trans[dataset][cor]['count']))) +" / "+ str(int(np.median(trans[dataset][cor]['falseneg']))) +" / "+ str(int(np.median(trans[dataset][cor]['falsepos']))) for cor in correct]) + '\\\\'
+        out = dataset.split('.')[0] + " & " + ' & '.join([str(
+            round(iqr(np.array(trans[dataset][cor]['truepos']) / total[dataset]), 2)) + " / " + str(round(
+            iqr(np.array(trans[dataset][cor]['truepos']) / (
+            np.array(trans[dataset][cor]['truepos']) + np.array(trans[dataset][cor]['falsepos']))), 2)) + " / " + str(
+            int(iqr(trans[dataset][cor]['count']))) for cor in correct]) + '\\\\'
         print(out)
         print("\\hline")
     print("\\end{tabular}")
